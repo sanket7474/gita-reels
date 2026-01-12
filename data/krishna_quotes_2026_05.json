@@ -1,0 +1,312 @@
+[
+  {
+    "date": "2026-05-01",
+    "day": 1,
+    "topic": "Do Your Duty",
+    "source": "Bhagavad Gita",
+    "reference": "18.47",
+    "sanskrit": "श्रेयाञ्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।",
+    "english": "Better your own duty than another’s.",
+    "hindi": "अपना धर्म दूसरे के धर्म से बेहतर है।"
+  },
+  {
+    "date": "2026-05-02",
+    "day": 2,
+    "topic": "Control Desire",
+    "source": "Bhagavad Gita",
+    "reference": "3.37",
+    "sanskrit": "काम एष क्रोध एष।",
+    "english": "Desire becomes anger—control it.",
+    "hindi": "कामना ही क्रोध बनती है—इसे संभालो।"
+  },
+  {
+    "date": "2026-05-03",
+    "day": 3,
+    "topic": "Peace",
+    "source": "Bhagavad Gita",
+    "reference": "2.66",
+    "sanskrit": "अशान्तस्य कुतः सुखम्।",
+    "english": "Without peace, there is no happiness.",
+    "hindi": "शांति नहीं तो सुख नहीं।"
+  },
+  {
+    "date": "2026-05-04",
+    "day": 4,
+    "topic": "Let Go",
+    "source": "Bhagavad Gita",
+    "reference": "5.12",
+    "sanskrit": "कर्मफलं त्यक्त्वा।",
+    "english": "Let go of results.",
+    "hindi": "फल छोड़ दो।"
+  },
+  {
+    "date": "2026-05-05",
+    "day": 5,
+    "topic": "Stay Strong",
+    "source": "Bhagavad Gita",
+    "reference": "2.15",
+    "sanskrit": "यं हि न व्यथयन्त्येते पुरुषं पुरुषर्षभ।",
+    "english": "One not shaken by pain and pleasure is strong.",
+    "hindi": "जो सुख-दुःख में न डगमगाए वही मजबूत है।"
+  },
+  {
+    "date": "2026-05-06",
+    "day": 6,
+    "topic": "Faith",
+    "source": "Bhagavad Gita",
+    "reference": "4.40",
+    "sanskrit": "अश्रद्धधानः पुरुषो धर्मस्यास्य परन्तप।",
+    "english": "Without faith, growth is hard.",
+    "hindi": "श्रद्धा बिना उन्नति मुश्किल है।"
+  },
+  {
+    "date": "2026-05-07",
+    "day": 7,
+    "topic": "Inner Joy",
+    "source": "Bhagavad Gita",
+    "reference": "5.21",
+    "sanskrit": "विन्दत्यात्मनि यत्सुखम्।",
+    "english": "Find joy within.",
+    "hindi": "सुख भीतर खोजो।"
+  },
+  {
+    "date": "2026-05-08",
+    "day": 8,
+    "topic": "Consistency",
+    "source": "Bhagavad Gita",
+    "reference": "6.26",
+    "sanskrit": "यतो यतो निश्चरति मनः।",
+    "english": "Bring the mind back again and again.",
+    "hindi": "मन को बार-बार वापस लाओ।"
+  },
+  {
+    "date": "2026-05-09",
+    "day": 9,
+    "topic": "Pure Love",
+    "source": "Bhagavad Gita",
+    "reference": "12.13",
+    "sanskrit": "अद्वेष्टा सर्वभूतानाम्।",
+    "english": "Live without hatred.",
+    "hindi": "द्वेष मत रखो।"
+  },
+  {
+    "date": "2026-05-10",
+    "day": 10,
+    "topic": "Self Control",
+    "source": "Bhagavad Gita",
+    "reference": "6.6",
+    "sanskrit": "जितात्मनः प्रशान्तस्य।",
+    "english": "A conquered mind is peaceful.",
+    "hindi": "वश में किया मन ही शांत है।"
+  },
+  {
+    "date": "2026-05-11",
+    "day": 11,
+    "topic": "Be Present",
+    "source": "Bhagavad Gita",
+    "reference": "2.47",
+    "sanskrit": "कर्मण्येवाधिकारस्ते।",
+    "english": "Focus on action.",
+    "hindi": "ध्यान कर्म पर रखो।"
+  },
+  {
+    "date": "2026-05-12",
+    "day": 12,
+    "topic": "Truth",
+    "source": "Bhagavad Gita",
+    "reference": "17.15",
+    "sanskrit": "सत्यं प्रियहितं च यत्।",
+    "english": "Speak truth with kindness.",
+    "hindi": "सत्य बोलो, पर मधुर बोलो।"
+  },
+  {
+    "date": "2026-05-13",
+    "day": 13,
+    "topic": "Humility",
+    "source": "Bhagavad Gita",
+    "reference": "13.8",
+    "sanskrit": "अमानित्वम्।",
+    "english": "Ego blocks growth.",
+    "hindi": "अहंकार उन्नति रोकता है।"
+  },
+  {
+    "date": "2026-05-14",
+    "day": 14,
+    "topic": "Devotion",
+    "source": "Bhagavad Gita",
+    "reference": "9.26",
+    "sanskrit": "पत्रं पुष्पं फलं तोयम्।",
+    "english": "Offer with love, it is accepted.",
+    "hindi": "प्रेम से अर्पण करो, स्वीकार होगा।"
+  },
+  {
+    "date": "2026-05-15",
+    "day": 15,
+    "topic": "Let Go Anger",
+    "source": "Bhagavad Gita",
+    "reference": "2.63",
+    "sanskrit": "क्रोधाद्भवति सम्मोहः।",
+    "english": "Anger creates confusion.",
+    "hindi": "क्रोध से भ्रम होता है।"
+  },
+  {
+    "date": "2026-05-16",
+    "day": 16,
+    "topic": "Daily Practice",
+    "source": "Bhagavad Gita",
+    "reference": "6.35",
+    "sanskrit": "अभ्यासेन… वैराग्येण च।",
+    "english": "Practice brings control.",
+    "hindi": "अभ्यास से नियंत्रण आता है।"
+  },
+  {
+    "date": "2026-05-17",
+    "day": 17,
+    "topic": "Fearlessness",
+    "source": "Bhagavad Gita",
+    "reference": "16.1",
+    "sanskrit": "अभयम्।",
+    "english": "Fearlessness is divine.",
+    "hindi": "निर्भय होना दिव्य गुण है।"
+  },
+  {
+    "date": "2026-05-18",
+    "day": 18,
+    "topic": "Balance",
+    "source": "Bhagavad Gita",
+    "reference": "6.17",
+    "sanskrit": "युक्ताहारविहारस्य।",
+    "english": "Balanced routine brings peace.",
+    "hindi": "संतुलित दिनचर्या शांति देती है।"
+  },
+  {
+    "date": "2026-05-19",
+    "day": 19,
+    "topic": "Inner Light",
+    "source": "Bhagavad Gita",
+    "reference": "15.6",
+    "sanskrit": "न तद्भासयते सूर्यो।",
+    "english": "That divine light is beyond the sun.",
+    "hindi": "वह दिव्य प्रकाश सूर्य से भी परे है।"
+  },
+  {
+    "date": "2026-05-20",
+    "day": 20,
+    "topic": "Freedom",
+    "source": "Bhagavad Gita",
+    "reference": "5.3",
+    "sanskrit": "यो न द्वेष्टि न काङ्क्षति।",
+    "english": "No hate, no craving = freedom.",
+    "hindi": "न द्वेष, न लालच = मुक्ति।"
+  },
+  {
+    "date": "2026-05-21",
+    "day": 21,
+    "topic": "Do Your Best",
+    "source": "Bhagavad Gita",
+    "reference": "18.48",
+    "sanskrit": "सहजं कर्म… न त्यजेत्।",
+    "english": "Do your natural work, even if imperfect.",
+    "hindi": "अपना कर्म करो, भले perfect न हो।"
+  },
+  {
+    "date": "2026-05-22",
+    "day": 22,
+    "topic": "Control Mind",
+    "source": "Bhagavad Gita",
+    "reference": "6.26",
+    "sanskrit": "ततो नियम्य।",
+    "english": "Train the mind gently.",
+    "hindi": "मन को धीरे-धीरे साधो।"
+  },
+  {
+    "date": "2026-05-23",
+    "day": 23,
+    "topic": "Wisdom",
+    "source": "Bhagavad Gita",
+    "reference": "18.30",
+    "sanskrit": "प्रवृत्तिं च निवृत्तिं च।",
+    "english": "Wisdom knows what to do.",
+    "hindi": "बुद्धि जानती है क्या करना है।"
+  },
+  {
+    "date": "2026-05-24",
+    "day": 24,
+    "topic": "No Worry",
+    "source": "Bhagavad Gita",
+    "reference": "18.66",
+    "sanskrit": "मा शुचः।",
+    "english": "Do not worry.",
+    "hindi": "चिंता मत करो।"
+  },
+  {
+    "date": "2026-05-25",
+    "day": 25,
+    "topic": "Devotion Wins",
+    "source": "Bhagavad Gita",
+    "reference": "18.55",
+    "sanskrit": "भक्त्या मामभिजानाति।",
+    "english": "Devotion reveals the truth.",
+    "hindi": "भक्ति से ही सत्य समझ आता है।"
+  },
+  {
+    "date": "2026-05-26",
+    "day": 26,
+    "topic": "Compassion",
+    "source": "Bhagavad Gita",
+    "reference": "12.13",
+    "sanskrit": "मैत्रः करुण एव च।",
+    "english": "Compassion changes life.",
+    "hindi": "करुणा जीवन बदल देती है।"
+  },
+  {
+    "date": "2026-05-27",
+    "day": 27,
+    "topic": "Right Focus",
+    "source": "Bhagavad Gita",
+    "reference": "2.41",
+    "sanskrit": "व्यवसायात्मिका बुद्धिः।",
+    "english": "Focus your mind on one path.",
+    "hindi": "मन को एक दिशा में लगाओ।"
+  },
+  {
+    "date": "2026-05-28",
+    "day": 28,
+    "topic": "Be Calm",
+    "source": "Bhagavad Gita",
+    "reference": "2.56",
+    "sanskrit": "दुःखेष्वनुद्विग्नमनाः।",
+    "english": "Stay calm in difficulties.",
+    "hindi": "मुश्किल में भी शांत रहो।"
+  },
+  {
+    "date": "2026-05-29",
+    "day": 29,
+    "topic": "Equality",
+    "source": "Bhagavad Gita",
+    "reference": "5.18",
+    "sanskrit": "पण्डिताः समदर्शिनः।",
+    "english": "Wise people see everyone equally.",
+    "hindi": "ज्ञानी सबको समान देखते हैं।"
+  },
+  {
+    "date": "2026-05-30",
+    "day": 30,
+    "topic": "Do Not Stop",
+    "source": "Bhagavad Gita",
+    "reference": "2.3",
+    "sanskrit": "मा स्म गमः।",
+    "english": "Do not give up.",
+    "hindi": "हार मत मानो।"
+  },
+  {
+    "date": "2026-05-31",
+    "day": 31,
+    "topic": "Surrender",
+    "source": "Bhagavad Gita",
+    "reference": "18.66",
+    "sanskrit": "मामेकं शरणं व्रज।",
+    "english": "Surrender fully and be free.",
+    "hindi": "पूरी तरह शरण में आओ और मुक्त हो जाओ।"
+  }
+]

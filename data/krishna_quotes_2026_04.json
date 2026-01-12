@@ -1,0 +1,302 @@
+[
+  {
+    "date": "2026-04-01",
+    "day": 1,
+    "topic": "Inner Calm",
+    "source": "Bhagavad Gita",
+    "reference": "5.23",
+    "sanskrit": "शक्नोतीहैव यः सोढुं प्राक्शरीरविमोक्षणात्।",
+    "english": "Control desires now, not later.",
+    "hindi": "इच्छाओं को अभी संभालो, बाद में नहीं।"
+  },
+  {
+    "date": "2026-04-02",
+    "day": 2,
+    "topic": "Simplicity",
+    "source": "Bhagavad Gita",
+    "reference": "13.8",
+    "sanskrit": "अमानित्वमदम्भित्वम्।",
+    "english": "Stay humble and simple.",
+    "hindi": "विनम्र और सरल रहो।"
+  },
+  {
+    "date": "2026-04-03",
+    "day": 3,
+    "topic": "Steady Mind",
+    "source": "Bhagavad Gita",
+    "reference": "2.57",
+    "sanskrit": "यस्मिन् सर्वाणि भूतानि आत्मैवाभूद्विजानतः।",
+    "english": "See unity and stay balanced.",
+    "hindi": "एकता देखो और संतुलित रहो।"
+  },
+  {
+    "date": "2026-04-04",
+    "day": 4,
+    "topic": "Hope",
+    "source": "Bhagavad Gita",
+    "reference": "18.58",
+    "sanskrit": "मत्प्रसादात्तरिष्यसि।",
+    "english": "By My grace you will cross everything.",
+    "hindi": "मेरी कृपा से तुम सब पार करोगे।"
+  },
+  {
+    "date": "2026-04-05",
+    "day": 5,
+    "topic": "Kindness",
+    "source": "Bhagavad Gita",
+    "reference": "12.13",
+    "sanskrit": "मैत्रः करुण एव च।",
+    "english": "Be friendly and compassionate.",
+    "hindi": "मित्रभाव और करुणा रखो।"
+  },
+  {
+    "date": "2026-04-06",
+    "day": 6,
+    "topic": "Detach",
+    "source": "Bhagavad Gita",
+    "reference": "3.30",
+    "sanskrit": "मयि सर्वाणि कर्माणि संन्यस्य।",
+    "english": "Offer your actions to Me.",
+    "hindi": "अपने कर्म मुझे समर्पित करो।"
+  },
+  {
+    "date": "2026-04-07",
+    "day": 7,
+    "topic": "No Fear",
+    "source": "Bhagavad Gita",
+    "reference": "16.1",
+    "sanskrit": "अभयम्।",
+    "english": "Be fearless.",
+    "hindi": "निर्भय बनो।"
+  },
+  {
+    "date": "2026-04-08",
+    "day": 8,
+    "topic": "Wisdom",
+    "source": "Bhagavad Gita",
+    "reference": "4.38",
+    "sanskrit": "ज्ञानेन सदृशं पवित्रम्।",
+    "english": "Nothing purifies like knowledge.",
+    "hindi": "ज्ञान जैसा पवित्र कुछ नहीं।"
+  },
+  {
+    "date": "2026-04-09",
+    "day": 9,
+    "topic": "Silence",
+    "source": "Bhagavad Gita",
+    "reference": "17.16",
+    "sanskrit": "मौनमात्मविनिग्रहः।",
+    "english": "Silence with self-control is power.",
+    "hindi": "संयम के साथ मौन भी शक्ति है।"
+  },
+  {
+    "date": "2026-04-10",
+    "day": 10,
+    "topic": "Let Go",
+    "source": "Bhagavad Gita",
+    "reference": "5.10",
+    "sanskrit": "ब्रह्मण्याधाय कर्माणि सङ्गं त्यक्त्वा करोति यः।",
+    "english": "Act without attachment and stay pure.",
+    "hindi": "आसक्ति छोड़कर कर्म करो—मन शुद्ध रहेगा।"
+  },
+  {
+    "date": "2026-04-11",
+    "day": 11,
+    "topic": "Be Present",
+    "source": "Bhagavad Gita",
+    "reference": "6.26",
+    "sanskrit": "ततो नियम्यैतदात्मन्येव वशं नयेत्।",
+    "english": "Bring the mind back to the present.",
+    "hindi": "मन को बार-बार वर्तमान में लाओ।"
+  },
+  {
+    "date": "2026-04-12",
+    "day": 12,
+    "topic": "Trust",
+    "source": "Bhagavad Gita",
+    "reference": "9.34",
+    "sanskrit": "मन्मना भव मद्भक्तः।",
+    "english": "Keep Me in your mind.",
+    "hindi": "मुझे मन में रखो।"
+  },
+  {
+    "date": "2026-04-13",
+    "day": 13,
+    "topic": "Humility",
+    "source": "Bhagavad Gita",
+    "reference": "13.7",
+    "sanskrit": "अमानित्वम।",
+    "english": "Drop ego.",
+    "hindi": "अहंकार छोड़ो।"
+  },
+  {
+    "date": "2026-04-14",
+    "day": 14,
+    "topic": "Strength",
+    "source": "Bhagavad Gita",
+    "reference": "10.36",
+    "sanskrit": "दमोऽस्मि जिताम्।",
+    "english": "I am self-control among the disciplined.",
+    "hindi": "संयम रखने वालों में मैं संयम हूँ।"
+  },
+  {
+    "date": "2026-04-15",
+    "day": 15,
+    "topic": "Light",
+    "source": "Bhagavad Gita",
+    "reference": "15.6",
+    "sanskrit": "न तद्भासयते सूर्यो न शशाङ्को न पावकः।",
+    "english": "That Supreme place needs no sun or moon.",
+    "hindi": "वह परम धाम सूर्य-चंद्र से भी परे है।"
+  },
+  {
+    "date": "2026-04-16",
+    "day": 16,
+    "topic": "Self Respect",
+    "source": "Bhagavad Gita",
+    "reference": "6.5",
+    "sanskrit": "उद्धरेदात्मनात्मानम्।",
+    "english": "Raise yourself.",
+    "hindi": "खुद को उठाओ।"
+  },
+  {
+    "date": "2026-04-17",
+    "day": 17,
+    "topic": "Clean Heart",
+    "source": "Bhagavad Gita",
+    "reference": "17.14",
+    "sanskrit": "शौचम्।",
+    "english": "Purity matters.",
+    "hindi": "शुद्धता जरूरी है।"
+  },
+  {
+    "date": "2026-04-18",
+    "day": 18,
+    "topic": "Peace",
+    "source": "Bhagavad Gita",
+    "reference": "5.29",
+    "sanskrit": "शान्तिमृच्छति।",
+    "english": "You will attain peace.",
+    "hindi": "तुम्हें शांति मिलेगी।"
+  },
+  {
+    "date": "2026-04-19",
+    "day": 19,
+    "topic": "No Envy",
+    "source": "Bhagavad Gita",
+    "reference": "12.13",
+    "sanskrit": "निर्ममः निरहङ्कारः।",
+    "english": "Be free from 'mine' and ego.",
+    "hindi": "मेरा-तेरा और अहंकार छोड़ो।"
+  },
+  {
+    "date": "2026-04-20",
+    "day": 20,
+    "topic": "Right Effort",
+    "source": "Bhagavad Gita",
+    "reference": "6.25",
+    "sanskrit": "बुद्ध्या धृतिगृहीतया।",
+    "english": "Move forward with patience.",
+    "hindi": "धैर्य के साथ आगे बढ़ो।"
+  },
+  {
+    "date": "2026-04-21",
+    "day": 21,
+    "topic": "Freedom",
+    "source": "Bhagavad Gita",
+    "reference": "5.3",
+    "sanskrit": "यो न द्वेष्टि न काङ्क्षति।",
+    "english": "One who hates and craves not is free.",
+    "hindi": "जो न द्वेष करे न लालच—वही मुक्त है।"
+  },
+  {
+    "date": "2026-04-22",
+    "day": 22,
+    "topic": "No Worry",
+    "source": "Bhagavad Gita",
+    "reference": "2.47",
+    "sanskrit": "मा फलेषु कदाचन।",
+    "english": "Do not worry about results.",
+    "hindi": "फल की चिंता मत करो।"
+  },
+  {
+    "date": "2026-04-23",
+    "day": 23,
+    "topic": "Surrender",
+    "source": "Bhagavad Gita",
+    "reference": "18.66",
+    "sanskrit": "मामेकं शरणं व्रज।",
+    "english": "Come to Me for shelter.",
+    "hindi": "मेरी शरण में आओ।"
+  },
+  {
+    "date": "2026-04-24",
+    "day": 24,
+    "topic": "Be Pure",
+    "source": "Bhagavad Gita",
+    "reference": "16.1",
+    "sanskrit": "सत्त्वसंशुद्धिः।",
+    "english": "Purify your nature.",
+    "hindi": "अपने स्वभाव को शुद्ध करो।"
+  },
+  {
+    "date": "2026-04-25",
+    "day": 25,
+    "topic": "Faith",
+    "source": "Bhagavad Gita",
+    "reference": "17.3",
+    "sanskrit": "श्रद्धामयोऽयं पुरुषः।",
+    "english": "You become what you believe.",
+    "hindi": "जैसी श्रद्धा, वैसा इंसान।"
+  },
+  {
+    "date": "2026-04-26",
+    "day": 26,
+    "topic": "Courage",
+    "source": "Bhagavad Gita",
+    "reference": "2.3",
+    "sanskrit": "मा स्म गमः।",
+    "english": "Do not lose heart.",
+    "hindi": "हिम्मत मत हारो।"
+  },
+  {
+    "date": "2026-04-27",
+    "day": 27,
+    "topic": "Devotion",
+    "source": "Bhagavad Gita",
+    "reference": "9.26",
+    "sanskrit": "यो मे भक्त्या प्रयच्छति।",
+    "english": "Offer with love.",
+    "hindi": "प्रेम से अर्पण करो।"
+  },
+  {
+    "date": "2026-04-28",
+    "day": 28,
+    "topic": "Balance",
+    "source": "Bhagavad Gita",
+    "reference": "6.17",
+    "sanskrit": "युक्ताहारविहारस्य।",
+    "english": "Balance is the key.",
+    "hindi": "संतुलन ही कुंजी है।"
+  },
+  {
+    "date": "2026-04-29",
+    "day": 29,
+    "topic": "Steady Wisdom",
+    "source": "Bhagavad Gita",
+    "reference": "2.70",
+    "sanskrit": "समुद्रमापः प्रविशन्ति यद्वत्।",
+    "english": "Stay steady like the ocean.",
+    "hindi": "समुद्र की तरह स्थिर रहो।"
+  },
+  {
+    "date": "2026-04-30",
+    "day": 30,
+    "topic": "Pure Love",
+    "source": "Bhagavad Gita",
+    "reference": "12.15",
+    "sanskrit": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः।",
+    "english": "One who neither disturbs nor is disturbed is dear.",
+    "hindi": "जो न किसी को दुख दे, न खुद दुखी हो—वही प्रिय है।"
+  }
+]
