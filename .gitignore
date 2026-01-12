@@ -1,0 +1,4 @@
+output/reel.mp4
+output/tmp/
+__pycache__/
+.venv/
