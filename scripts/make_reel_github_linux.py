@@ -1,9 +1,11 @@
 import json
 import numpy as np
 import random
+import subprocess
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from moviepy.editor import VideoClip, AudioFileClip
+from xml.sax.saxutils import escape as xml_escape
 
 ROOT = Path(__file__).resolve().parents[1]
 FONTS = ROOT / "fonts"
@@ -14,11 +16,14 @@ INPUT_QUOTE = OUTPUT / "today_quote.json"
 OUT_VIDEO = OUTPUT / "reel.mp4"
 
 BG_IMAGE = ASSETS / "bg_krishna_arjuna.png"
-MUSIC_DIR = ASSETS / "music"  # assets/music/Music1.mp3 ... Music10.mp3
+MUSIC_DIR = ASSETS / "music"
 
 W, H = 1080, 1920
 DURATION = 12
 FPS = 30
+
+TMP = OUTPUT / "tmp"
+TMP.mkdir(parents=True, exist_ok=True)
 
 
 def load_quote():
@@ -61,7 +66,7 @@ def wrap_lines(draw, text, font_obj, max_width):
     return lines
 
 
-# ✅ Thin premium shadow + subtle glow
+# ✅ Thin premium shadow + subtle glow (English only)
 def draw_text_glow(draw, x, y, text, font_obj, alpha=255):
     shadow_alpha = int(alpha * 0.35)
     draw.text((x + 2, y + 3), text, font=font_obj, fill=(0, 0, 0, shadow_alpha))
@@ -116,6 +121,36 @@ def load_background():
     return img
 
 
+# ✅ Perfect Devanagari rendering via pango-view (Linux)
+def render_with_pango_view(text: str, out_png: Path, font_desc: str, width_px: int):
+    safe = xml_escape(text)
+    markup = f"<span foreground='#FFFFFF'>{safe}</span>"
+
+    subprocess.run(
+        [
+            "pango-view",
+            "--markup",
+            f"--font={font_desc}",
+            f"--width={width_px}",
+            f"--output={str(out_png)}",
+            markup,
+        ],
+        check=True
+    )
+
+
+def paste_centered(bg: Image.Image, fg: Image.Image, center_x: int, center_y: int, alpha: float = 1.0):
+    fg = fg.convert("RGBA")
+    if alpha < 1.0:
+        r, g, b, a = fg.split()
+        a = a.point(lambda p: int(p * alpha))
+        fg = Image.merge("RGBA", (r, g, b, a))
+
+    x = int(center_x - fg.width / 2)
+    y = int(center_y - fg.height / 2)
+    bg.alpha_composite(fg, (x, y))
+
+
 def pick_music_file():
     if not MUSIC_DIR.exists():
         raise FileNotFoundError(f"Music folder not found: {MUSIC_DIR}")
@@ -153,10 +188,9 @@ def build_audio():
 def main():
     quote = load_quote()
 
+    # English fonts (Pillow)
     f_title = font(FONTS / "NotoSans-Regular.ttf", 62)
-    f_sanskrit = font(FONTS / "NotoSansDevanagari-Regular.ttf", 82)
     f_eng = font(FONTS / "NotoSans-Regular.ttf", 48)
-    f_hin = font(FONTS / "NotoSansDevanagari-Regular.ttf", 58)
     f_footer = font(FONTS / "NotoSans-Regular.ttf", 34)
 
     bg_base = load_background()
@@ -175,12 +209,29 @@ def main():
         a_hi = fade_alpha(t, 4.0, 0.8)
         a_footer = fade_alpha(t, 5.2, 0.8)
 
-        draw_centered_block(draw, "ॐ", f_sanskrit, center_y=165, alpha=a_title, max_width=400, line_spacing=0)
+        # ✅ ॐ (pango)
+        if a_title > 0:
+            om_png = TMP / "om.png"
+            render_with_pango_view("ॐ", om_png, "Noto Sans Devanagari 92", 400)
+            paste_centered(bg, Image.open(om_png), W // 2, 165, alpha=a_title)
+
+        # Topic (English)
         draw_centered_block(draw, quote["topic"], f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
 
-        draw_centered_block(draw, quote["sanskrit"], f_sanskrit, center_y=560, alpha=a_san)
-        draw_centered_block(draw, quote["english"], f_eng, center_y=1040, alpha=a_en)
-        draw_centered_block(draw, quote["hindi"], f_hin, center_y=1240, alpha=a_hi)
+        # ✅ Sanskrit (pango)
+        if a_san > 0:
+            san_png = TMP / "sanskrit.png"
+            render_with_pango_view(quote["sanskrit"], san_png, "Noto Sans Devanagari 78", W - 140)
+            paste_centered(bg, Image.open(san_png), W // 2, 560, alpha=a_san)
+
+        # ✅ English moved up
+        draw_centered_block(draw, quote["english"], f_eng, center_y=960, alpha=a_en)
+
+        # ✅ Hindi moved up + conjuncts fixed
+        if a_hi > 0:
+            hi_png = TMP / "hindi.png"
+            render_with_pango_view(quote["hindi"], hi_png, "Noto Sans Devanagari 56", W - 160)
+            paste_centered(bg, Image.open(hi_png), W // 2, 1180, alpha=a_hi)
 
         footer = f"Bhagavad Gita {quote['reference']}"
         draw_centered_block(draw, footer, f_footer, center_y=1760, alpha=a_footer, max_width=1000, line_spacing=10)
@@ -188,8 +239,6 @@ def main():
         return np.array(bg.convert("RGB"))
 
     clip = VideoClip(make_frame, duration=DURATION)
-
-    # ✅ attach music
     clip = clip.set_audio(build_audio())
 
     OUTPUT.mkdir(exist_ok=True)
@@ -201,7 +250,7 @@ def main():
         bitrate="10M"
     )
 
-    print("✅ Windows reel generated:", OUT_VIDEO)
+    print("✅ Linux reel generated (music + correct conjuncts):", OUT_VIDEO)
 
 
 if __name__ == "__main__":
