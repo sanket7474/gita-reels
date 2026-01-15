@@ -3,8 +3,11 @@ name: Daily Gita Reel
 on:
   workflow_dispatch:
   schedule:
-    # Runs daily at 7:00 AM IST (01:30 UTC)
+    # ✅ Runs daily at 7:00 AM IST (01:30 UTC)
     - cron: "30 1 * * *"
+
+permissions:
+  contents: write
 
 jobs:
   build-reel:
@@ -34,7 +37,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install moviepy==1.0.3 pillow numpy imageio imageio-ffmpeg
 
-      # ✅ OPTIONAL: Enable this only if you have the script
+      # ✅ OPTIONAL: only enable if you have this script
       # - name: Pick today's quote
       #   run: |
       #     python scripts/pick_today_quote.py
@@ -56,3 +59,36 @@ jobs:
           path: |
             output/reel.mp4
             output/caption.txt
+
+      - name: Prepare GitHub Pages content
+        run: |
+          mkdir -p pages/reels
+          cp output/reel.mp4 pages/reels/reel.mp4
+          cp output/caption.txt pages/reels/caption.txt
+
+          # index page
+          cat > pages/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Daily Gita Reel</title>
+          </head>
+          <body style="font-family: Arial; padding: 20px;">
+            <h2>Daily Gita Reel</h2>
+            <p><a href="reels/reel.mp4">Download Reel</a></p>
+            <p><a href="reels/caption.txt">Caption</a></p>
+            <video controls width="360">
+              <source src="reels/reel.mp4" type="video/mp4">
+            </video>
+          </body>
+          </html>
+          EOF
+
+      - name: Deploy to GitHub Pages (gh-pages)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: pages
+          publish_branch: gh-pages
