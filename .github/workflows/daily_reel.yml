@@ -69,8 +69,8 @@ jobs:
           mkdir -p pages/reels
           cp output/reel.mp4 pages/reels/reel.mp4
           cp output/caption.txt pages/reels/caption.txt
-          cp pages/privacy-policy.html pages/privacy-policy.html
-          
+          # cp pages/privacy-policy.html pages/privacy-policy.html
+
           # index page
           cat > pages/index.html <<'EOF'
           <!DOCTYPE html>
