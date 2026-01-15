@@ -130,11 +130,12 @@ def render_with_pango_view(text: str, out_png: Path, font_desc: str, width_px: i
         [
             "pango-view",
             "--markup",
+            "--stdin",
             f"--font={font_desc}",
             f"--width={width_px}",
             f"--output={str(out_png)}",
-            markup,
         ],
+        input=markup.encode("utf-8"),
         check=True
     )
 
@@ -209,7 +210,7 @@ def main():
         a_hi = fade_alpha(t, 4.0, 0.8)
         a_footer = fade_alpha(t, 5.2, 0.8)
 
-        # ✅ ॐ (pango)
+        # ॐ (pango)
         if a_title > 0:
             om_png = TMP / "om.png"
             render_with_pango_view("ॐ", om_png, "Noto Sans Devanagari 92", 400)
@@ -218,16 +219,16 @@ def main():
         # Topic (English)
         draw_centered_block(draw, quote["topic"], f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
 
-        # ✅ Sanskrit (pango)
+        # Sanskrit (pango)
         if a_san > 0:
             san_png = TMP / "sanskrit.png"
             render_with_pango_view(quote["sanskrit"], san_png, "Noto Sans Devanagari 78", W - 140)
             paste_centered(bg, Image.open(san_png), W // 2, 560, alpha=a_san)
 
-        # ✅ English moved up
+        # English
         draw_centered_block(draw, quote["english"], f_eng, center_y=960, alpha=a_en)
 
-        # ✅ Hindi moved up + conjuncts fixed
+        # Hindi (pango)
         if a_hi > 0:
             hi_png = TMP / "hindi.png"
             render_with_pango_view(quote["hindi"], hi_png, "Noto Sans Devanagari 56", W - 160)
