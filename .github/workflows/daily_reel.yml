@@ -46,7 +46,11 @@ jobs:
         run: |
           mkdir -p output
           python scripts/make_caption.py
-
+      
+      - name: Pick today's quote
+        run: |
+          python scripts/pick_today_quote.py
+      
       - name: Generate reel (Linux)
         run: |
           mkdir -p output
