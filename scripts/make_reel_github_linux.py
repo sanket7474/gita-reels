@@ -179,8 +179,8 @@ def main():
         draw_centered_block(draw, quote["topic"], f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
 
         draw_centered_block(draw, quote["sanskrit"], f_sanskrit, center_y=560, alpha=a_san)
-        draw_centered_block(draw, quote["english"], f_eng, center_y=1040, alpha=a_en)
-        draw_centered_block(draw, quote["hindi"], f_hin, center_y=1240, alpha=a_hi)
+        draw_centered_block(draw, quote["english"], f_eng, center_y=960, alpha=a_en)
+        draw_centered_block(draw, quote["hindi"], f_hin, center_y=1180, alpha=a_hi)
 
         footer = f"Bhagavad Gita {quote['reference']}"
         draw_centered_block(draw, footer, f_footer, center_y=1760, alpha=a_footer, max_width=1000, line_spacing=10)
