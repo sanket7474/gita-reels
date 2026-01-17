@@ -176,7 +176,7 @@ def main():
         a_hi = fade_alpha(t, 4.0, 0.8)
         a_footer = fade_alpha(t, 5.2, 0.8)
 
-        draw_centered_block(draw, "ॐ", f_sanskrit, center_y=165, alpha=a_title, max_width=400, line_spacing=0)
+        draw_centered_block(draw, "|| ॐ ||", f_sanskrit, center_y=165, alpha=a_title, max_width=400, line_spacing=0)
         draw_centered_block(draw, quote["topic"], f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
 
         draw_centered_block(draw, quote["sanskrit"], f_sanskrit, center_y=560, alpha=a_san)
