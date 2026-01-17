@@ -44,16 +44,15 @@ jobs:
 
       - name: Pick today's quote
         run: |
+          mkdir -p output
           python scripts/pick_today_quote.py
       
       - name: Generate caption
         run: |
-          mkdir -p output
           python scripts/make_caption.py
 
       - name: Generate reel (Linux)
         run: |
-          mkdir -p output
           python scripts/make_reel_github_linux.py
 
       - name: Upload reel + caption artifact
