@@ -13,7 +13,7 @@ OUTPUT = ROOT / "output"
 INPUT_QUOTE = OUTPUT / "today_quote.json"
 OUT_VIDEO = OUTPUT / "reel.mp4"
 
-BG_IMAGE = ASSETS / "bg_krishna_arjuna.png"
+BG_IMAGE = ASSETS / "bg_krishna_arjuna2.png"
 MUSIC_DIR = ASSETS / "music"  # assets/music/Music1.mp3 ... Music10.mp3
 
 W, H = 1080, 1920
