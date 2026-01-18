@@ -60,17 +60,20 @@ def wrap_lines(draw, text, font_obj, max_width):
         lines.append(cur)
     return lines
 
-
-# ✅ Thin premium shadow + subtle glow
+# ✅ Gold text (best for blue AMOLED background)
 def draw_text_glow(draw, x, y, text, font_obj, alpha=255):
-    shadow_alpha = int(alpha * 0.35)
+    # shadow
+    shadow_alpha = int(alpha * 0.40)
     draw.text((x + 2, y + 3), text, font=font_obj, fill=(0, 0, 0, shadow_alpha))
 
-    glow_alpha = int(alpha * 0.10)
+    # glow (warm)
+    glow_alpha = int(alpha * 0.15)
     for ox, oy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-        draw.text((x + ox, y + oy), text, font=font_obj, fill=(255, 255, 255, glow_alpha))
+        draw.text((x + ox, y + oy), text, font=font_obj, fill=(255, 225, 150, glow_alpha))
 
-    draw.text((x, y), text, font=font_obj, fill=(255, 255, 255, alpha))
+    # main gold text
+    draw.text((x, y), text, font=font_obj, fill=(255, 215, 120, alpha))  # GOLD
+
 
 
 def draw_centered_block(draw, text, font_obj, center_y, alpha, max_width=940, line_spacing=18):
@@ -181,7 +184,7 @@ def main():
 
         # ✅ ONLY positions changed here
         draw_centered_block(draw, quote["sanskrit"], f_sanskrit, center_y=560, alpha=a_san)
-        draw_centered_block(draw, quote["english"], f_eng, center_y=900, alpha=a_en)   # moved up
+        draw_centered_block(draw, quote["english"], f_eng, center_y=880, alpha=a_en)   # moved up
         draw_centered_block(draw, quote["hindi"], f_hin, center_y=1120, alpha=a_hi)    # moved up
 
         footer = f"Bhagavad Gita {quote['reference']}"
