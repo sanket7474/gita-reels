@@ -228,7 +228,7 @@ def main():
             paste_centered(bg, Image.open(san_png), W // 2, 560, alpha=a_san)
 
         # ✅ English at 940
-        draw_centered_block(draw, quote["english"], f_eng, center_y=940, alpha=a_en)
+        draw_centered_block(draw, quote["english"], f_eng, center_y=900, alpha=a_en)
 
         # ✅ Hindi at 1160
         if a_hi > 0:
