@@ -13,7 +13,7 @@ OUTPUT = ROOT / "output"
 INPUT_QUOTE = OUTPUT / "today_quote.json"
 OUT_VIDEO = OUTPUT / "reel.mp4"
 
-BG_IMAGE = ASSETS / "bg_krishna_arjuna2.png"
+BG_IMAGE = ASSETS / "bg_krishna_arjuna.png"
 MUSIC_DIR = ASSETS / "music"  # assets/music/Music1.mp3 ... Music10.mp3
 
 W, H = 1080, 1920
@@ -61,16 +61,18 @@ def wrap_lines(draw, text, font_obj, max_width):
     return lines
 
 
-# ✅ Thin premium shadow + subtle glow
+# ✅ Gold text + premium shadow/glow
 def draw_text_glow(draw, x, y, text, font_obj, alpha=255):
-    shadow_alpha = int(alpha * 0.35)
+    main = (255, 215, 120, alpha)  # gold #FFD778
+
+    shadow_alpha = int(alpha * 0.40)
     draw.text((x + 2, y + 3), text, font=font_obj, fill=(0, 0, 0, shadow_alpha))
 
-    glow_alpha = int(alpha * 0.10)
+    glow_alpha = int(alpha * 0.18)
     for ox, oy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-        draw.text((x + ox, y + oy), text, font=font_obj, fill=(255, 255, 255, glow_alpha))
+        draw.text((x + ox, y + oy), text, font=font_obj, fill=(255, 220, 140, glow_alpha))
 
-    draw.text((x, y), text, font=font_obj, fill=(255, 255, 255, alpha))
+    draw.text((x, y), text, font=font_obj, fill=main)
 
 
 def draw_centered_block(draw, text, font_obj, center_y, alpha, max_width=940, line_spacing=18):
@@ -140,7 +142,6 @@ def build_audio():
     print("🎵 Using music:", music_path.name)
 
     audio = AudioFileClip(str(music_path))
-
     if audio.duration >= DURATION:
         audio = audio.subclip(0, DURATION)
     else:
@@ -176,16 +177,14 @@ def main():
         a_hi = fade_alpha(t, 4.0, 0.8)
         a_footer = fade_alpha(t, 5.2, 0.8)
 
-        draw_centered_block(draw, "|| ॐ ||", f_sanskrit, center_y=165, alpha=a_title, max_width=400, line_spacing=0)
-        draw_centered_block(draw, quote["topic"], f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
+        # top
+        draw_centered_block(draw, "ॐ", f_sanskrit, center_y=165, alpha=a_title, max_width=400, line_spacing=0)
+        draw_centered_block(draw, quote.get("topic", ""), f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
 
-        draw_centered_block(draw, quote["sanskrit"], f_sanskrit, center_y=560, alpha=a_san)
-
-        # ✅ moved up
-        draw_centered_block(draw, quote["english"], f_eng, center_y=960, alpha=a_en)
-
-        # ✅ moved up slightly
-        draw_centered_block(draw, quote["hindi"], f_hin, center_y=1180, alpha=a_hi)
+        # ✅ tighter positions
+        draw_centered_block(draw, quote["sanskrit"], f_sanskrit, center_y=540, alpha=a_san)
+        draw_centered_block(draw, quote["english"], f_eng, center_y=880, alpha=a_en)
+        draw_centered_block(draw, quote["hindi"], f_hin, center_y=1100, alpha=a_hi)
 
         footer = f"Bhagavad Gita {quote['reference']}"
         draw_centered_block(draw, footer, f_footer, center_y=1760, alpha=a_footer, max_width=1000, line_spacing=10)
