@@ -15,7 +15,7 @@ OUTPUT = ROOT / "output"
 INPUT_QUOTE = OUTPUT / "today_quote.json"
 OUT_VIDEO = OUTPUT / "reel.mp4"
 
-BG_IMAGE = ASSETS / "bg_krishna_arjuna.png"
+BG_IMAGE = ASSETS / "bg_krishna_arjuna2.png"
 MUSIC_DIR = ASSETS / "music"
 
 W, H = 1080, 1920
@@ -68,18 +68,16 @@ def wrap_lines(draw, text, font_obj, max_width):
     return lines
 
 
-# ✅ Gold text + premium shadow/glow (English via Pillow)
+# ✅ White text + premium shadow/glow (English via Pillow)
 def draw_text_glow(draw, x, y, text, font_obj, alpha=255):
-    main = (255, 215, 120, alpha)  # gold #FFD778
-
-    shadow_alpha = int(alpha * 0.40)
+    shadow_alpha = int(alpha * 0.35)
     draw.text((x + 2, y + 3), text, font=font_obj, fill=(0, 0, 0, shadow_alpha))
 
-    glow_alpha = int(alpha * 0.18)
+    glow_alpha = int(alpha * 0.10)
     for ox, oy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-        draw.text((x + ox, y + oy), text, font=font_obj, fill=(255, 220, 140, glow_alpha))
+        draw.text((x + ox, y + oy), text, font=font_obj, fill=(255, 255, 255, glow_alpha))
 
-    draw.text((x, y), text, font=font_obj, fill=main)
+    draw.text((x, y), text, font=font_obj, fill=(255, 255, 255, alpha))
 
 
 def draw_centered_block(draw, text, font_obj, center_y, alpha, max_width=940, line_spacing=18):
@@ -128,7 +126,7 @@ def load_background():
 # ✅ PERFECT DEVANAGARI on Linux (pango-view + stdin)
 def render_with_pango_view(text: str, out_png: Path, font_desc: str, width_px: int):
     safe = xml_escape(text)
-    markup = f"<span foreground='#FFD778'>{safe}</span>"
+    markup = f"<span foreground='#FFFFFF'>{safe}</span>"
 
     subprocess.run(
         [
@@ -214,38 +212,31 @@ def main():
         a_hi = fade_alpha(t, 4.0, 0.8)
         a_footer = fade_alpha(t, 5.2, 0.8)
 
-        # ॐ
+        # ✅ || ॐ || at 165
         if a_title > 0:
             om_png = TMP / "om.png"
-            render_with_pango_view("ॐ", om_png, "Noto Sans Devanagari 92", 400)
+            render_with_pango_view("|| ॐ ||", om_png, "Noto Sans Devanagari 92", 600)
             paste_centered(bg, Image.open(om_png), W // 2, 165, alpha=a_title)
 
-        # Topic
-        draw_centered_block(
-            draw,
-            quote.get("topic", ""),
-            f_title,
-            center_y=270,
-            alpha=a_title,
-            max_width=900,
-            line_spacing=10
-        )
+        # ✅ Topic at 270
+        draw_centered_block(draw, quote.get("topic", ""), f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
 
-        # Sanskrit (tight)
+        # ✅ Sanskrit at 560
         if a_san > 0:
             san_png = TMP / "sanskrit.png"
             render_with_pango_view(quote["sanskrit"], san_png, "Noto Sans Devanagari 78", W - 140)
-            paste_centered(bg, Image.open(san_png), W // 2, 540, alpha=a_san)
+            paste_centered(bg, Image.open(san_png), W // 2, 560, alpha=a_san)
 
-        # English (tight)
-        draw_centered_block(draw, quote["english"], f_eng, center_y=880, alpha=a_en)
+        # ✅ English at 940
+        draw_centered_block(draw, quote["english"], f_eng, center_y=940, alpha=a_en)
 
-        # Hindi (tight)
+        # ✅ Hindi at 1160
         if a_hi > 0:
             hi_png = TMP / "hindi.png"
             render_with_pango_view(quote["hindi"], hi_png, "Noto Sans Devanagari 56", W - 160)
-            paste_centered(bg, Image.open(hi_png), W // 2, 1100, alpha=a_hi)
+            paste_centered(bg, Image.open(hi_png), W // 2, 1160, alpha=a_hi)
 
+        # Footer
         footer = f"Bhagavad Gita {quote['reference']}"
         draw_centered_block(draw, footer, f_footer, center_y=1760, alpha=a_footer, max_width=1000, line_spacing=10)
 
