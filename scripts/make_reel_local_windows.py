@@ -157,8 +157,8 @@ def main():
 
     f_title = font(FONTS / "NotoSans-Regular.ttf", 62)
     f_sanskrit = font(FONTS / "NotoSansDevanagari-Regular.ttf", 82)
-    f_eng = font(FONTS / "NotoSans-Regular.ttf", 48)
-    f_hin = font(FONTS / "NotoSansDevanagari-Regular.ttf", 58)
+    f_eng = font(FONTS / "NotoSans-Regular.ttf", 55)
+    f_hin = font(FONTS / "NotoSansDevanagari-Regular.ttf", 60)
     f_footer = font(FONTS / "NotoSans-Regular.ttf", 34)
 
     bg_base = load_background()
