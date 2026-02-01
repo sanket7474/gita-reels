@@ -198,9 +198,9 @@ def main():
         # ✅ Dynamic Flow
         y = 520
         y = draw_block_from_top(draw, quote["sanskrit"], f_sanskrit, y, a_san)
-        y += 40
+        y += 60
         y = draw_block_from_top(draw, quote["english"], f_eng, y, a_en)
-        y += 35
+        y += 60
         draw_block_from_top(draw, quote["hindi"], f_hin, y, a_hi)
 
         footer = f"Bhagavad Gita {quote['reference']}"
