@@ -1,282 +1,387 @@
 [
   {
     "date": "2026-02-01",
-    "day": 1,
     "topic": "Right Mindset",
-    "source": "Bhagavad Gita",
-    "reference": "2.48",
     "sanskrit": "योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।",
-    "english": "Be steady in yoga—act without attachment.",
-    "hindi": "स्थिर होकर कर्म करो—आसक्ति छोड़ दो।"
+    "english": "Stay steady in inner balance while performing your actions.\nLet go of attachment, and allow your work to become a path of peace.",
+    "hindi": "अंतर में संतुलन रखते हुए कर्म करो।\nआसक्ति छोड़कर अपने कर्म को शांति का मार्ग बनाओ।",
+    "reference": "Bhagavad Gita 2.48"
   },
   {
     "date": "2026-02-02",
-    "day": 2,
     "topic": "Balance",
-    "source": "Bhagavad Gita",
-    "reference": "2.50",
     "sanskrit": "बुद्धियुक्तो जहातीह उभे सुकृतदुष्कृते।",
-    "english": "Wisdom frees you from both good and bad outcomes.",
-    "hindi": "बुद्धि तुम्हें अच्छे-बुरे दोनों परिणामों से मुक्त करती है।"
+    "english": "True wisdom releases you from pride and guilt.\nIt keeps you balanced in both success and failure.",
+    "hindi": "सच्ची बुद्धि अहंकार और ग्लानि से मुक्त करती है।\nयह सफलता और असफलता दोनों में संतुलन सिखाती है।",
+    "reference": "Bhagavad Gita 2.50"
   },
   {
     "date": "2026-02-03",
-    "day": 3,
     "topic": "Self Discipline",
-    "source": "Bhagavad Gita",
-    "reference": "6.16",
     "sanskrit": "नात्यश्नतस्तु योगोऽस्ति न चैकान्तमनश्नतः।",
-    "english": "Balance your eating and living to grow spiritually.",
-    "hindi": "जीवन में संतुलन रखो—यही योग का आधार है।"
+    "english": "Spiritual growth comes from moderation, not extremes.\nBalance your habits to steady your mind.",
+    "hindi": "अति से नहीं, संतुलन से उन्नति होती है।\nअपनी आदतों में संतुलन रखो।",
+    "reference": "Bhagavad Gita 6.16"
   },
   {
     "date": "2026-02-04",
-    "day": 4,
-    "topic": "Patience",
-    "source": "Bhagavad Gita",
-    "reference": "6.25",
-    "sanskrit": "शनैः शनैरुपरमेद्बुद्ध्या धृतिगृहीतया।",
-    "english": "Step by step, calm the mind with patience.",
-    "hindi": "धीरे-धीरे धैर्य से मन को शांत करो।"
+    "topic": "Self Control",
+    "sanskrit": "यदा विनियतं चित्तमात्मन्येवावतिष्ठते।",
+    "english": "When the mind becomes calm and steady within,\ninner peace naturally begins to flow.",
+    "hindi": "जब मन भीतर शांत और स्थिर हो जाता है,\nतभी सच्ची शांति मिलती है।",
+    "reference": "Bhagavad Gita 6.18"
   },
   {
     "date": "2026-02-05",
-    "day": 5,
-    "topic": "Inner Light",
-    "source": "Bhagavad Gita",
-    "reference": "13.17",
-    "sanskrit": "ज्योतिषामपि तज्ज्योतिः तमसः परमुच्यते।",
-    "english": "That Supreme Light is beyond all darkness.",
-    "hindi": "वो परम प्रकाश हर अंधकार से परे है।"
+    "topic": "Inner Peace",
+    "sanskrit": "शान्तोऽयं सुखमास्नोति।",
+    "english": "A peaceful mind becomes the home of true happiness.\nCalmness opens the door to inner joy.",
+    "hindi": "शांत मन ही सच्चे सुख का घर होता है।\nशांति से भीतर आनंद जन्म लेता है।",
+    "reference": "Bhagavad Gita 6.15"
   },
   {
     "date": "2026-02-06",
-    "day": 6,
-    "topic": "Purity of Heart",
-    "source": "Bhagavad Gita",
-    "reference": "17.14",
-    "sanskrit": "देवद्विजगुरुप्राज्ञपूजनं शौचमार्जवम्।",
-    "english": "Respect, cleanliness, and simplicity purify you.",
-    "hindi": "सम्मान, स्वच्छता और सरलता मन को शुद्ध करती है।"
+    "topic": "Detachment",
+    "sanskrit": "त्यक्त्वा कर्मफलासङ्गं नित्यतृप्तो निराश्रयः।",
+    "english": "When you release attachment to outcomes, freedom arises.\nContentment begins from within.",
+    "hindi": "जब परिणाम की आस छोड़ देते हो, तब स्वतंत्रता मिलती है।\nसंतोष भीतर से जन्म लेता है।",
+    "reference": "Bhagavad Gita 4.20"
   },
   {
     "date": "2026-02-07",
-    "day": 7,
     "topic": "True Happiness",
-    "source": "Bhagavad Gita",
-    "reference": "5.21",
     "sanskrit": "बाह्यस्पर्शेष्वसक्तात्मा विन्दत्यात्मनि यत्सुखम्।",
-    "english": "Real joy comes from within.",
-    "hindi": "असली सुख बाहर नहीं, भीतर से आता है।"
+    "english": "True happiness is not found in the outside world.\nIt quietly arises from within your own heart.",
+    "hindi": "सच्चा सुख बाहर की चीज़ों में नहीं मिलता।\nवह भीतर से, शांत मन से उत्पन्न होता है।",
+    "reference": "Bhagavad Gita 5.21"
   },
   {
     "date": "2026-02-08",
-    "day": 8,
-    "topic": "Control Desire",
-    "source": "Bhagavad Gita",
-    "reference": "3.37",
-    "sanskrit": "काम एष क्रोध एष रजोगुणसमुद्भवः।",
-    "english": "Desire turns into anger—control it early.",
-    "hindi": "कामना ही आगे चलकर क्रोध बनती है—शुरू में ही रोक दो।"
+    "topic": "Faith",
+    "sanskrit": "श्रद्धावान्लभते ज्ञानम्।",
+    "english": "Faith opens the door to wisdom.\nTrust leads the way toward understanding.",
+    "hindi": "श्रद्धा से ही ज्ञान प्राप्त होता है।\nविश्वास जीवन को सही दिशा देता है।",
+    "reference": "Bhagavad Gita 4.39"
   },
   {
     "date": "2026-02-09",
-    "day": 9,
-    "topic": "Do Your Best",
-    "source": "Bhagavad Gita",
-    "reference": "18.48",
-    "sanskrit": "सहजं कर्म कौन्तेय सदोषमपि न त्यजेत्।",
-    "english": "Do your natural duty—even if imperfect.",
-    "hindi": "अपना स्वाभाविक कर्म करो—भले उसमें कमी हो।"
+    "topic": "Courage",
+    "sanskrit": "क्लैब्यं मा स्म गमः पार्थ।",
+    "english": "Do not surrender to fear or weakness.\nRise with courage and face life boldly.",
+    "hindi": "डर और कमजोरी के आगे मत झुको।\nसाहस के साथ जीवन का सामना करो।",
+    "reference": "Bhagavad Gita 2.3"
   },
   {
     "date": "2026-02-10",
-    "day": 10,
-    "topic": "Detachment",
-    "source": "Bhagavad Gita",
-    "reference": "3.7",
-    "sanskrit": "यस्त्विन्द्रियाणि मनसा नियम्यारभतेऽर्जुन।",
-    "english": "Control senses and act—this is true strength.",
-    "hindi": "इन्द्रियों को साधकर कर्म करना ही असली शक्ति है।"
+    "topic": "Surrender",
+    "sanskrit": "मामेकं शरणं व्रज।",
+    "english": "Let go of all burdens and surrender with trust.\nYou are never alone on this path.",
+    "hindi": "सब कुछ छोड़कर श्रद्धा से शरण में आ जाओ।\nतुम कभी अकेले नहीं हो।",
+    "reference": "Bhagavad Gita 18.66"
   },
   {
     "date": "2026-02-11",
-    "day": 11,
-    "topic": "Calm Mind",
-    "source": "Bhagavad Gita",
-    "reference": "6.15",
-    "sanskrit": "शान्तिम् निर्वाणपरमां मत्संस्थामधिगच्छति।",
-    "english": "A peaceful mind reaches the highest peace.",
-    "hindi": "शांत मन परम शांति तक पहुंचता है।"
+    "topic": "Self Mastery",
+    "sanskrit": "बन्धुरात्माऽऽत्मनस्तस्य येनात्मैवात्मना जितः।",
+    "english": "When you master your own mind, it becomes your greatest friend.\nSelf-control leads to inner strength.",
+    "hindi": "जब तुम अपने मन को जीत लेते हो, वही तुम्हारा सच्चा मित्र बन जाता है।\nआत्मसंयम से भीतर शक्ति आती है।",
+    "reference": "Bhagavad Gita 6.6"
   },
   {
     "date": "2026-02-12",
-    "day": 12,
-    "topic": "Never Give Up",
-    "source": "Bhagavad Gita",
-    "reference": "18.58",
-    "sanskrit": "मच्चित्तः सर्वदुर्गाणि मत्प्रसादात्तरिष्यसि।",
-    "english": "With faith in Me, you will cross all difficulties.",
-    "hindi": "मुझ पर भरोसा रखो—हर मुश्किल पार हो जाएगी।"
+    "topic": "Focus",
+    "sanskrit": "युञ्जन्नेवं सदाऽत्मानं योगी नियतमानसः।",
+    "english": "A disciplined mind leads you toward clarity and peace.\nDaily focus builds spiritual strength.",
+    "hindi": "संयमित मन तुम्हें शांति और स्पष्टता देता है।\nनियमित अभ्यास से आत्मबल बढ़ता है।",
+    "reference": "Bhagavad Gita 6.12"
   },
   {
     "date": "2026-02-13",
-    "day": 13,
-    "topic": "Wisdom",
-    "source": "Bhagavad Gita",
-    "reference": "4.38",
-    "sanskrit": "न हि ज्ञानेन सदृशं पवित्रमिह विद्यते।",
-    "english": "Nothing purifies like true knowledge.",
-    "hindi": "सच्चे ज्ञान जैसा पवित्र कुछ नहीं।"
+    "topic": "Divine Presence",
+    "sanskrit": "यो मां पश्यति सर्वत्र सर्वं च मयि पश्यति।",
+    "english": "See the Divine in everything and everyone.\nThis vision transforms the way you live.",
+    "hindi": "हर जगह ईश्वर को देखो।\nयही दृष्टि जीवन को बदल देती है।",
+    "reference": "Bhagavad Gita 6.30"
   },
   {
     "date": "2026-02-14",
-    "day": 14,
-    "topic": "Humility",
-    "source": "Bhagavad Gita",
-    "reference": "13.8",
-    "sanskrit": "अमानित्वमदम्भित्वम अहिंसा क्षान्तिरार्जवम्।",
-    "english": "Humility and patience are signs of inner growth.",
-    "hindi": "विनम्रता और क्षमा ही असली उन्नति है।"
+    "topic": "Self Control",
+    "sanskrit": "इन्द्रियाणि मनसा नियम्य।",
+    "english": "Train the senses with awareness.\nA controlled mind creates a peaceful life.",
+    "hindi": "इन्द्रियों को संयम में रखो।\nसंयमित मन से शांत जीवन बनता है।",
+    "reference": "Bhagavad Gita 3.7"
   },
   {
     "date": "2026-02-15",
-    "day": 15,
-    "topic": "Faith",
-    "source": "Bhagavad Gita",
-    "reference": "17.3",
-    "sanskrit": "श्रद्धामयोऽयं पुरुषः।",
-    "english": "A person becomes what they believe.",
-    "hindi": "इंसान वही बनता है जैसी उसकी श्रद्धा होती है।"
+    "topic": "Compassion",
+    "sanskrit": "अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च।",
+    "english": "Be kind, gentle, and free from hatred.\nCompassion is the mark of a true devotee.",
+    "hindi": "द्वेष से मुक्त होकर करुणा रखो।\nकरुणा ही सच्चे भक्त की पहचान है।",
+    "reference": "Bhagavad Gita 12.13"
   },
   {
     "date": "2026-02-16",
-    "day": 16,
-    "topic": "Let Go",
-    "source": "Bhagavad Gita",
-    "reference": "2.62",
-    "sanskrit": "ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते।",
-    "english": "Attachment begins in the mind—cut it early.",
-    "hindi": "आसक्ति मन से शुरू होती है—उसे वहीं रोक दो।"
+    "topic": "Contentment",
+    "sanskrit": "सन्तुष्टः सततं योगी।",
+    "english": "Contentment brings lasting peace.\nGratitude fills the heart with joy.",
+    "hindi": "संतोष से स्थायी शांति मिलती है।\nकृतज्ञता से हृदय आनंदित होता है।",
+    "reference": "Bhagavad Gita 12.14"
   },
   {
     "date": "2026-02-17",
-    "day": 17,
-    "topic": "Pure Devotion",
-    "source": "Bhagavad Gita",
-    "reference": "12.6",
-    "sanskrit": "ये तु सर्वाणि कर्माणि मयि संन्यस्य मत्पराः।",
-    "english": "Offer all actions to Me with devotion.",
-    "hindi": "अपने सारे कर्म मुझे अर्पित करो।"
+    "topic": "Steady Mind",
+    "sanskrit": "दुःखेष्वनुद्विग्नमनाः सुखेषु विगतस्पृहः।",
+    "english": "Remain steady in pain and humble in joy.\nThis balance leads to freedom.",
+    "hindi": "दुःख में विचलित न हो और सुख में आसक्त न बनो।\nयही संतुलन मुक्ति देता है।",
+    "reference": "Bhagavad Gita 2.56"
   },
   {
     "date": "2026-02-18",
-    "day": 18,
-    "topic": "Clarity",
-    "source": "Bhagavad Gita",
-    "reference": "18.30",
-    "sanskrit": "प्रवृत्तिं च निवृत्तिं च कार्याकार्ये भयाभये।",
-    "english": "True wisdom knows what to do and what not to do.",
-    "hindi": "सच्ची बुद्धि सही-गलत में फर्क जानती है।"
+    "topic": "Devotion",
+    "sanskrit": "मनमना भव मद्भक्तो।",
+    "english": "Keep your mind on the Divine.\nLet devotion guide your life.",
+    "hindi": "मन को ईश्वर में लगाओ।\nभक्ति को अपना मार्ग बनाओ।",
+    "reference": "Bhagavad Gita 18.65"
   },
   {
     "date": "2026-02-19",
-    "day": 19,
-    "topic": "Time",
-    "source": "Bhagavad Gita",
-    "reference": "11.32",
-    "sanskrit": "कालोऽस्मि लोकक्षयकृत्प्रवृद्धः।",
-    "english": "I am Time, the great transformer.",
-    "hindi": "मैं काल हूँ—सब कुछ बदलने वाला।"
+    "topic": "Fearlessness",
+    "sanskrit": "अभयं सत्त्वसंशुद्धिः।",
+    "english": "Fearlessness arises from purity of heart.\nWalk your path with courage.",
+    "hindi": "निर्भयता पवित्र हृदय से जन्म लेती है।\nसाहस के साथ आगे बढ़ो।",
+    "reference": "Bhagavad Gita 16.1"
   },
   {
     "date": "2026-02-20",
-    "day": 20,
-    "topic": "Courage",
-    "source": "Bhagavad Gita",
-    "reference": "2.3",
-    "sanskrit": "क्लैब्यं मा स्म गमः पार्थ।",
-    "english": "Do not fall into weakness.",
-    "hindi": "कमजोरी में मत जाओ।"
+    "topic": "Right Action",
+    "sanskrit": "तस्मादसक्तः सततं कार्यं कर्म समाचर।",
+    "english": "Perform your duty without attachment.\nLet your actions become worship.",
+    "hindi": "आसक्ति छोड़कर कर्म करो।\nअपने कर्म को साधना बनाओ।",
+    "reference": "Bhagavad Gita 3.19"
+  },
+  {
+    "date": "2026-02-11",
+    "topic": "Self Mastery",
+    "sanskrit": "बन्धुरात्माऽऽत्मनस्तस्य येनात्मैवात्मना जितः।",
+    "english": "When you master your own mind, it becomes your greatest friend.\nSelf-control leads to inner strength.",
+    "hindi": "जब तुम अपने मन को जीत लेते हो, वही तुम्हारा सच्चा मित्र बन जाता है।\nआत्मसंयम से भीतर शक्ति आती है।",
+    "reference": "Bhagavad Gita 6.6"
+  },
+  {
+    "date": "2026-02-12",
+    "topic": "Focus",
+    "sanskrit": "युञ्जन्नेवं सदाऽत्मानं योगी नियतमानसः।",
+    "english": "A disciplined mind leads you toward clarity and peace.\nDaily focus builds spiritual strength.",
+    "hindi": "संयमित मन तुम्हें शांति और स्पष्टता देता है।\nनियमित अभ्यास से आत्मबल बढ़ता है।",
+    "reference": "Bhagavad Gita 6.12"
+  },
+  {
+    "date": "2026-02-13",
+    "topic": "Divine Presence",
+    "sanskrit": "यो मां पश्यति सर्वत्र सर्वं च मयि पश्यति।",
+    "english": "See the Divine in everything and everyone.\nThis vision transforms the way you live.",
+    "hindi": "हर जगह ईश्वर को देखो।\nयही दृष्टि जीवन को बदल देती है।",
+    "reference": "Bhagavad Gita 6.30"
+  },
+  {
+    "date": "2026-02-14",
+    "topic": "Self Control",
+    "sanskrit": "इन्द्रियाणि मनसा नियम्य।",
+    "english": "Train the senses with awareness.\nA controlled mind creates a peaceful life.",
+    "hindi": "इन्द्रियों को संयम में रखो।\nसंयमित मन से शांत जीवन बनता है।",
+    "reference": "Bhagavad Gita 3.7"
+  },
+  {
+    "date": "2026-02-15",
+    "topic": "Compassion",
+    "sanskrit": "अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च।",
+    "english": "Be kind, gentle, and free from hatred.\nCompassion is the mark of a true devotee.",
+    "hindi": "द्वेष से मुक्त होकर करुणा रखो।\nकरुणा ही सच्चे भक्त की पहचान है।",
+    "reference": "Bhagavad Gita 12.13"
+  },
+  {
+    "date": "2026-02-16",
+    "topic": "Contentment",
+    "sanskrit": "सन्तुष्टः सततं योगी।",
+    "english": "Contentment brings lasting peace.\nGratitude fills the heart with joy.",
+    "hindi": "संतोष से स्थायी शांति मिलती है।\nकृतज्ञता से हृदय आनंदित होता है।",
+    "reference": "Bhagavad Gita 12.14"
+  },
+  {
+    "date": "2026-02-17",
+    "topic": "Steady Mind",
+    "sanskrit": "दुःखेष्वनुद्विग्नमनाः सुखेषु विगतस्पृहः।",
+    "english": "Remain steady in pain and humble in joy.\nThis balance leads to freedom.",
+    "hindi": "दुःख में विचलित न हो और सुख में आसक्त न बनो।\nयही संतुलन मुक्ति देता है।",
+    "reference": "Bhagavad Gita 2.56"
+  },
+  {
+    "date": "2026-02-18",
+    "topic": "Devotion",
+    "sanskrit": "मनमना भव मद्भक्तो।",
+    "english": "Keep your mind on the Divine.\nLet devotion guide your life.",
+    "hindi": "मन को ईश्वर में लगाओ।\nभक्ति को अपना मार्ग बनाओ।",
+    "reference": "Bhagavad Gita 18.65"
+  },
+  {
+    "date": "2026-02-19",
+    "topic": "Fearlessness",
+    "sanskrit": "अभयं सत्त्वसंशुद्धिः।",
+    "english": "Fearlessness arises from purity of heart.\nWalk your path with courage.",
+    "hindi": "निर्भयता पवित्र हृदय से जन्म लेती है।\nसाहस के साथ आगे बढ़ो।",
+    "reference": "Bhagavad Gita 16.1"
+  },
+  {
+    "date": "2026-02-20",
+    "topic": "Right Action",
+    "sanskrit": "तस्मादसक्तः सततं कार्यं कर्म समाचर।",
+    "english": "Perform your duty without attachment.\nLet your actions become worship.",
+    "hindi": "आसक्ति छोड़कर कर्म करो।\nअपने कर्म को साधना बनाओ।",
+    "reference": "Bhagavad Gita 3.19"
+  },
+    {
+    "date": "2026-02-11",
+    "topic": "Self Mastery",
+    "sanskrit": "बन्धुरात्माऽऽत्मनस्तस्य येनात्मैवात्मना जितः।",
+    "english": "When you master your own mind, it becomes your greatest friend.\nSelf-control leads to inner strength.",
+    "hindi": "जब तुम अपने मन को जीत लेते हो, वही तुम्हारा सच्चा मित्र बन जाता है।\nआत्मसंयम से भीतर शक्ति आती है।",
+    "reference": "Bhagavad Gita 6.6"
+  },
+  {
+    "date": "2026-02-12",
+    "topic": "Focus",
+    "sanskrit": "युञ्जन्नेवं सदाऽत्मानं योगी नियतमानसः।",
+    "english": "A disciplined mind leads you toward clarity and peace.\nDaily focus builds spiritual strength.",
+    "hindi": "संयमित मन तुम्हें शांति और स्पष्टता देता है।\nनियमित अभ्यास से आत्मबल बढ़ता है।",
+    "reference": "Bhagavad Gita 6.12"
+  },
+  {
+    "date": "2026-02-13",
+    "topic": "Divine Presence",
+    "sanskrit": "यो मां पश्यति सर्वत्र सर्वं च मयि पश्यति।",
+    "english": "See the Divine in everything and everyone.\nThis vision transforms the way you live.",
+    "hindi": "हर जगह ईश्वर को देखो।\nयही दृष्टि जीवन को बदल देती है।",
+    "reference": "Bhagavad Gita 6.30"
+  },
+  {
+    "date": "2026-02-14",
+    "topic": "Self Control",
+    "sanskrit": "इन्द्रियाणि मनसा नियम्य।",
+    "english": "Train the senses with awareness.\nA controlled mind creates a peaceful life.",
+    "hindi": "इन्द्रियों को संयम में रखो।\nसंयमित मन से शांत जीवन बनता है।",
+    "reference": "Bhagavad Gita 3.7"
+  },
+  {
+    "date": "2026-02-15",
+    "topic": "Compassion",
+    "sanskrit": "अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च।",
+    "english": "Be kind, gentle, and free from hatred.\nCompassion is the mark of a true devotee.",
+    "hindi": "द्वेष से मुक्त होकर करुणा रखो।\nकरुणा ही सच्चे भक्त की पहचान है।",
+    "reference": "Bhagavad Gita 12.13"
+  },
+  {
+    "date": "2026-02-16",
+    "topic": "Contentment",
+    "sanskrit": "सन्तुष्टः सततं योगी।",
+    "english": "Contentment brings lasting peace.\nGratitude fills the heart with joy.",
+    "hindi": "संतोष से स्थायी शांति मिलती है।\nकृतज्ञता से हृदय आनंदित होता है।",
+    "reference": "Bhagavad Gita 12.14"
+  },
+  {
+    "date": "2026-02-17",
+    "topic": "Steady Mind",
+    "sanskrit": "दुःखेष्वनुद्विग्नमनाः सुखेषु विगतस्पृहः।",
+    "english": "Remain steady in pain and humble in joy.\nThis balance leads to freedom.",
+    "hindi": "दुःख में विचलित न हो और सुख में आसक्त न बनो।\nयही संतुलन मुक्ति देता है।",
+    "reference": "Bhagavad Gita 2.56"
+  },
+  {
+    "date": "2026-02-18",
+    "topic": "Devotion",
+    "sanskrit": "मनमना भव मद्भक्तो।",
+    "english": "Keep your mind on the Divine.\nLet devotion guide your life.",
+    "hindi": "मन को ईश्वर में लगाओ।\nभक्ति को अपना मार्ग बनाओ।",
+    "reference": "Bhagavad Gita 18.65"
+  },
+  {
+    "date": "2026-02-19",
+    "topic": "Fearlessness",
+    "sanskrit": "अभयं सत्त्वसंशुद्धिः।",
+    "english": "Fearlessness arises from purity of heart.\nWalk your path with courage.",
+    "hindi": "निर्भयता पवित्र हृदय से जन्म लेती है।\nसाहस के साथ आगे बढ़ो।",
+    "reference": "Bhagavad Gita 16.1"
+  },
+  {
+    "date": "2026-02-20",
+    "topic": "Right Action",
+    "sanskrit": "तस्मादसक्तः सततं कार्यं कर्म समाचर।",
+    "english": "Perform your duty without attachment.\nLet your actions become worship.",
+    "hindi": "आसक्ति छोड़कर कर्म करो।\nअपने कर्म को साधना बनाओ।",
+    "reference": "Bhagavad Gita 3.19"
   },
   {
     "date": "2026-02-21",
-    "day": 21,
-    "topic": "Rise Above Ego",
-    "source": "Bhagavad Gita",
-    "reference": "3.27",
-    "sanskrit": "अहङ्कारविमूढात्मा कर्ताहमिति मन्यते।",
-    "english": "Ego makes you think 'I alone do everything'.",
-    "hindi": "अहंकार सोचता है—सब मैंने ही किया।"
+    "topic": "Divine Help",
+    "sanskrit": "अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते।",
+    "english": "Those who remember the Divine with love are always protected.\nGrace quietly walks beside them.",
+    "hindi": "जो प्रेम से ईश्वर का स्मरण करते हैं, उनकी रक्षा होती है।\nकृपा सदा उनके साथ रहती है।",
+    "reference": "Bhagavad Gita 9.22"
   },
   {
     "date": "2026-02-22",
-    "day": 22,
-    "topic": "Trust",
-    "source": "Bhagavad Gita",
-    "reference": "9.34",
-    "sanskrit": "मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु।",
-    "english": "Think of Me, be devoted, and you will come to Me.",
-    "hindi": "मुझे याद करो, भक्ति करो—तुम मेरे पास आओगे।"
+    "topic": "Humility",
+    "sanskrit": "अमानित्वमदम्भित्वम्।",
+    "english": "Humility opens the door to true wisdom.\nEgo closes it.",
+    "hindi": "नम्रता से सच्चा ज्ञान मिलता है।\nअहंकार उसे रोक देता है।",
+    "reference": "Bhagavad Gita 13.8"
   },
   {
     "date": "2026-02-23",
-    "day": 23,
-    "topic": "Freedom",
-    "source": "Bhagavad Gita",
-    "reference": "5.3",
-    "sanskrit": "ज्ञेयः स नित्यसंन्यासी यो न द्वेष्टि न काङ्क्षति।",
-    "english": "One who hates none and desires none is truly free.",
-    "hindi": "जो न द्वेष करता है, न लालच—वही सच में मुक्त है।"
+    "topic": "Inner Strength",
+    "sanskrit": "बलं बलवतां चाहं।",
+    "english": "True strength comes from righteousness.\nIt lives within you.",
+    "hindi": "सच्ची शक्ति धर्म से आती है।\nवह तुम्हारे भीतर है।",
+    "reference": "Bhagavad Gita 7.11"
   },
   {
     "date": "2026-02-24",
-    "day": 24,
-    "topic": "Daily Effort",
-    "source": "Bhagavad Gita",
-    "reference": "6.35",
-    "sanskrit": "असंशयं महाबाहो मनो दुर्निग्रहं चलम्।",
-    "english": "The mind is restless, but it can be trained.",
-    "hindi": "मन चंचल है, पर अभ्यास से काबू में आता है।"
+    "topic": "Equanimity",
+    "sanskrit": "समत्वं योग उच्यते।",
+    "english": "Balance in all situations is yoga.\nStay centered.",
+    "hindi": "हर स्थिति में संतुलन ही योग है।\nकेंद्रित रहो।",
+    "reference": "Bhagavad Gita 2.48"
   },
   {
     "date": "2026-02-25",
-    "day": 25,
-    "topic": "Devotion Wins",
-    "source": "Bhagavad Gita",
-    "reference": "18.55",
-    "sanskrit": "भक्त्या मामभिजानाति।",
-    "english": "Only devotion truly reveals Me.",
-    "hindi": "मुझे सच में भक्ति से ही जाना जाता है।"
+    "topic": "Self Trust",
+    "sanskrit": "श्रद्धावान्लभते ज्ञानम्।",
+    "english": "Trust yourself and walk forward.\nWisdom follows faith.",
+    "hindi": "खुद पर भरोसा रखो और आगे बढ़ो।\nश्रद्धा से ज्ञान मिलता है।",
+    "reference": "Bhagavad Gita 4.39"
   },
   {
     "date": "2026-02-26",
-    "day": 26,
-    "topic": "No Fear",
-    "source": "Bhagavad Gita",
-    "reference": "18.66",
-    "sanskrit": "मा शुचः।",
-    "english": "Do not fear.",
-    "hindi": "चिंता मत करो।"
+    "topic": "Detachment",
+    "sanskrit": "सङ्गात्सञ्जायते कामः।",
+    "english": "Attachment gives rise to desire.\nFreedom begins with letting go.",
+    "hindi": "आसक्ति से इच्छा जन्म लेती है।\nत्याग से मुक्ति मिलती है।",
+    "reference": "Bhagavad Gita 2.62"
   },
   {
     "date": "2026-02-27",
-    "day": 27,
-    "topic": "Inner Peace",
-    "source": "Bhagavad Gita",
-    "reference": "5.29",
-    "sanskrit": "सुहृदं सर्वभूतानां ज्ञात्वा मां शान्तिमृच्छति।",
-    "english": "Know Me as your well-wisher, and find peace.",
-    "hindi": "मुझे अपना शुभचिंतक जानो—शांति मिलेगी।"
+    "topic": "Divine Assurance",
+    "sanskrit": "न मे भक्तः प्रणश्यति।",
+    "english": "The Divine never abandons a true devotee.\nYou are always held in grace.",
+    "hindi": "ईश्वर अपने भक्त को कभी नहीं छोड़ता।\nतुम सदा उसकी कृपा में हो।",
+    "reference": "Bhagavad Gita 9.31"
   },
   {
     "date": "2026-02-28",
-    "day": 28,
-    "topic": "Be a Light",
-    "source": "Bhagavad Gita",
-    "reference": "3.21",
-    "sanskrit": "यद्यदाचरति श्रेष्ठस्तत्तदेवेतरो जनः।",
-    "english": "People follow what the best do.",
-    "hindi": "जैसा श्रेष्ठ व्यक्ति करता है, लोग वही सीखते हैं।"
+    "topic": "Purpose",
+    "sanskrit": "स्वधर्मे निधनं श्रेयः।",
+    "english": "Following your own path is better than copying another.\nWalk your truth.",
+    "hindi": "अपना मार्ग अपनाना श्रेष्ठ है।\nअपने सत्य पर चलो।",
+    "reference": "Bhagavad Gita 3.35"
   }
 ]
+
