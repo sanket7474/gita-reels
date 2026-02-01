@@ -14,7 +14,7 @@ INPUT_QUOTE = OUTPUT / "today_quote.json"
 OUT_VIDEO = OUTPUT / "reel.mp4"
 
 BG_IMAGE = ASSETS / "bg_krishna_arjuna.png"
-MUSIC_DIR = ASSETS / "music"  # assets/music/Music1.mp3 ... Music10.mp3
+MUSIC_DIR = ASSETS / "music"
 
 W, H = 1080, 1920
 DURATION = 12
@@ -60,20 +60,17 @@ def wrap_lines(draw, text, font_obj, max_width):
         lines.append(cur)
     return lines
 
+
 # ✅ Gold text (best for blue AMOLED background)
 def draw_text_glow(draw, x, y, text, font_obj, alpha=255):
-    # shadow
     shadow_alpha = int(alpha * 0.40)
     draw.text((x + 2, y + 3), text, font=font_obj, fill=(0, 0, 0, shadow_alpha))
 
-    # glow (warm)
     glow_alpha = int(alpha * 0.15)
     for ox, oy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
         draw.text((x + ox, y + oy), text, font=font_obj, fill=(255, 225, 150, glow_alpha))
 
-    # main gold text
-    draw.text((x, y), text, font=font_obj, fill=(255, 215, 120, alpha))  # GOLD
-
+    draw.text((x, y), text, font=font_obj, fill=(255, 215, 120, alpha))
 
 
 def draw_centered_block(draw, text, font_obj, center_y, alpha, max_width=940, line_spacing=18):
@@ -92,6 +89,28 @@ def draw_centered_block(draw, text, font_obj, center_y, alpha, max_width=940, li
         x = (W - widths[i]) // 2
         draw_text_glow(draw, x, y, line, font_obj, alpha=int(255 * alpha))
         y += heights[i] + line_spacing
+
+
+# ✅ NEW: stack text dynamically from top
+def draw_block_from_top(draw, text, font_obj, start_y, alpha,
+                        max_width=940, line_spacing=26):
+
+    lines = wrap_lines(draw, text, font_obj, max_width=max_width)
+
+    heights, widths = [], []
+    for line in lines:
+        bbox = draw.textbbox((0, 0), line, font=font_obj)
+        widths.append(bbox[2] - bbox[0])
+        heights.append(bbox[3] - bbox[1])
+
+    y = start_y
+
+    for i, line in enumerate(lines):
+        x = (W - widths[i]) // 2
+        draw_text_glow(draw, x, y, line, font_obj, alpha=int(255 * alpha))
+        y += heights[i] + line_spacing
+
+    return y
 
 
 def load_background():
@@ -120,9 +139,6 @@ def load_background():
 
 
 def pick_music_file():
-    if not MUSIC_DIR.exists():
-        raise FileNotFoundError(f"Music folder not found: {MUSIC_DIR}")
-
     preferred = []
     for i in range(1, 11):
         f = MUSIC_DIR / f"Music{i}.mp3"
@@ -134,21 +150,20 @@ def pick_music_file():
 
     mp3s = list(MUSIC_DIR.glob("*.mp3"))
     if not mp3s:
-        raise FileNotFoundError(f"No .mp3 files found in {MUSIC_DIR}")
+        raise FileNotFoundError("No mp3 files found")
     return random.choice(mp3s)
 
 
 def build_audio():
     music_path = pick_music_file()
-    print("🎵 Using music:", music_path.name)
-
     audio = AudioFileClip(str(music_path))
+
     if audio.duration >= DURATION:
         audio = audio.subclip(0, DURATION)
     else:
         audio = audio.audio_loop(duration=DURATION)
 
-    audio = audio.audio_fadein(1.0).audio_fadeout(1.0)
+    audio = audio.audio_fadein(1).audio_fadeout(1)
     audio = audio.volumex(0.12)
     return audio
 
@@ -166,34 +181,34 @@ def main():
 
     def make_frame(t):
         bg = bg_base.copy().convert("RGBA")
-
         overlay = Image.new("RGBA", (W, H), (0, 0, 0, 55))
         bg = Image.alpha_composite(bg, overlay)
-
         draw = ImageDraw.Draw(bg, "RGBA")
 
-        a_title = fade_alpha(t, 0.2, 0.8)
-        a_san = fade_alpha(t, 1.2, 0.8)
-        a_en = fade_alpha(t, 2.7, 0.8)
-        a_hi = fade_alpha(t, 4.0, 0.8)
-        a_footer = fade_alpha(t, 5.2, 0.8)
+        a_title = fade_alpha(t, 0.2)
+        a_san = fade_alpha(t, 1.2)
+        a_en = fade_alpha(t, 2.7)
+        a_hi = fade_alpha(t, 4.0)
+        a_footer = fade_alpha(t, 5.2)
 
-        # ✅ OM block unchanged
-        draw_centered_block(draw, "|| ॐ ||", f_sanskrit, center_y=165, alpha=a_title, max_width=400, line_spacing=0)
-        draw_centered_block(draw, quote["topic"], f_title, center_y=270, alpha=a_title, max_width=900, line_spacing=10)
+        # OM + Topic (unchanged)
+        draw_centered_block(draw, "|| ॐ ||", f_sanskrit, 165, a_title, 400, 0)
+        draw_centered_block(draw, quote["topic"], f_title, 270, a_title, 900, 10)
 
-        # ✅ ONLY positions changed here
-        draw_centered_block(draw, quote["sanskrit"], f_sanskrit, center_y=560, alpha=a_san)
-        draw_centered_block(draw, quote["english"], f_eng, center_y=880, alpha=a_en)   # moved up
-        draw_centered_block(draw, quote["hindi"], f_hin, center_y=1120, alpha=a_hi)    # moved up
+        # ✅ Dynamic Flow
+        y = 520
+        y = draw_block_from_top(draw, quote["sanskrit"], f_sanskrit, y, a_san)
+        y += 40
+        y = draw_block_from_top(draw, quote["english"], f_eng, y, a_en)
+        y += 35
+        draw_block_from_top(draw, quote["hindi"], f_hin, y, a_hi)
 
         footer = f"Bhagavad Gita {quote['reference']}"
-        draw_centered_block(draw, footer, f_footer, center_y=1760, alpha=a_footer, max_width=1000, line_spacing=10)
+        draw_centered_block(draw, footer, f_footer, 1760, a_footer, 1000, 10)
 
         return np.array(bg.convert("RGB"))
 
     clip = VideoClip(make_frame, duration=DURATION)
-
     clip = clip.set_audio(build_audio())
 
     OUTPUT.mkdir(exist_ok=True)
@@ -205,7 +220,7 @@ def main():
         bitrate="10M"
     )
 
-    print("✅ Windows reel generated:", OUT_VIDEO)
+    print("✅ Linux reel generated successfully")
 
 
 if __name__ == "__main__":
