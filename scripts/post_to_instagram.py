@@ -1,62 +1,49 @@
 import os
 import requests
 import time
-from dotenv import load_dotenv
+import sys
+from datetime import datetime
 
-load_dotenv()
-
+# --- Load environment variables ---
 IG_USER_ID = os.getenv("IG_USER_ID")
 ACCESS_TOKEN = os.getenv("IG_ACCESS_TOKEN")
-APP_ID = os.getenv("APP_ID")
-APP_SECRET = os.getenv("APP_SECRET")
 VIDEO_URL = os.getenv("VIDEO_URL")
 CAPTION_FILE = os.getenv("CAPTION_FILE", "output/caption.txt")
-
-
-print("APP_ID:", os.getenv("APP_ID"))
-print("APP_SECRET:", os.getenv("APP_SECRET")[:5], "...")
-print("IG_USER_ID:", os.getenv("IG_USER_ID"))
-print("ACCESS_TOKEN:", os.getenv("IG_ACCESS_TOKEN")[:10], "...")
-
+DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK")  # optional
 
 API_VERSION = "v24.0"
 MAX_ATTEMPTS = 30
 SLEEP_INTERVAL = 5
-REFRESH_THRESHOLD_DAYS = 50  # refresh if token is older than 50 days
 
-# --- Helper Functions ---
-def refresh_token():
-    """Refresh long-lived token if close to expiry"""
-    url = (
-        f"https://graph.facebook.com/{API_VERSION}/oauth/access_token"
-        f"?grant_type=fb_exchange_token"
-        f"&client_id={APP_ID}"
-        f"&client_secret={APP_SECRET}"
-        f"&fb_exchange_token={ACCESS_TOKEN}"
-    )
+# --- Helper functions ---
+def send_discord_notification(message: str):
+    """Send a message to Discord webhook"""
+    if not DISCORD_WEBHOOK:
+        print("No Discord webhook set. Skipping notification.")
+        return
+    try:
+        res = requests.post(DISCORD_WEBHOOK, json={"content": message})
+        if res.status_code in [200, 204]:
+            print("Discord notification sent ✅")
+        else:
+            print("Failed to send Discord notification:", res.text)
+    except Exception as e:
+        print("Error sending Discord notification:", e)
 
-    print("URL for token refresh:", url)
-
-    res = requests.get(url)
+def validate_token():
+    """Check if the access token is valid"""
+    url = f"https://graph.facebook.com/{API_VERSION}/me"
+    res = requests.get(url, params={"access_token": ACCESS_TOKEN})
     data = res.json()
-    if "access_token" in data:
-        new_token = data["access_token"]
-        print("Token refreshed ✅")
-        # Update .env
-        with open(".env", "r") as f:
-            lines = f.readlines()
-        with open(".env", "w") as f:
-            for line in lines:
-                if line.startswith("IG_ACCESS_TOKEN"):
-                    f.write(f"IG_ACCESS_TOKEN={new_token}\n")
-                else:
-                    f.write(line)
-        return new_token
-    else:
-        print("Failed to refresh token:", data)
-        return ACCESS_TOKEN
+    if "error" in data:
+        message = f"❌ Access token invalid or expired: {data}"
+        print(message)
+        send_discord_notification(message)
+        sys.exit(1)
+    print("✅ Access token is valid.")
 
 def create_media(media_type="REELS", is_story=False):
+    """Create Instagram media container"""
     url = f"https://graph.facebook.com/{API_VERSION}/{IG_USER_ID}/media"
     payload = {
         "media_type": media_type,
@@ -69,11 +56,14 @@ def create_media(media_type="REELS", is_story=False):
     res = requests.post(url, data=payload)
     data = res.json()
     if "id" not in data:
-        print("Error creating media:", data)
-        exit()
+        message = f"❌ Error creating media: {data}"
+        print(message)
+        send_discord_notification(message)
+        sys.exit(1)
     return data["id"]
 
 def wait_until_ready(media_id, label="Media"):
+    """Wait until media is processed and ready to publish"""
     status_url = f"https://graph.facebook.com/{API_VERSION}/{media_id}"
     attempt = 0
     while attempt < MAX_ATTEMPTS:
@@ -87,31 +77,56 @@ def wait_until_ready(media_id, label="Media"):
         if status == "FINISHED":
             return
         elif status == "ERROR":
-            print(f"{label} processing failed ❌")
-            exit()
+            message = f"{label} processing failed ❌"
+            print(message)
+            send_discord_notification(message)
+            sys.exit(1)
         attempt += 1
         time.sleep(SLEEP_INTERVAL)
-    print(f"{label} timed out waiting for processing")
-    exit()
+    message = f"{label} timed out waiting for processing"
+    print(message)
+    send_discord_notification(message)
+    sys.exit(1)
 
 def publish_media(media_id, label="Media"):
+    """Publish media to Instagram"""
     url = f"https://graph.facebook.com/{API_VERSION}/{IG_USER_ID}/media_publish"
     payload = {
         "creation_id": media_id,
         "access_token": ACCESS_TOKEN
     }
     res = requests.post(url, data=payload)
-    print(f"{label} published:", res.json())
+    data = res.json()
+    if "error" in data:
+        message = f"❌ Error publishing {label}: {data}"
+        print(message)
+        send_discord_notification(message)
+        sys.exit(1)
+    print(f"{label} published:", data)
+    return data  # return data for summary
 
-# --- Auto Refresh Token ---
-ACCESS_TOKEN = refresh_token()
+# --- Main workflow ---
+validate_token()
 
-# --- Upload Reel ---
+# Upload Reel
 reel_id = create_media(media_type="REELS")
 wait_until_ready(reel_id, "Reel")
-publish_media(reel_id, "Reel")
+reel_data = publish_media(reel_id, "Reel")
 
-# --- Upload Story ---
+# Upload Story
 story_id = create_media(media_type="VIDEO", is_story=True)
 wait_until_ready(story_id, "Story")
-publish_media(story_id, "Story")
+story_data = publish_media(story_id, "Story")
+
+# --- Send daily summary to Discord ---
+caption_snippet = open(CAPTION_FILE, "r", encoding="utf-8").read().strip()[:100]
+summary_message = (
+    f"📅 **Daily Instagram Post Summary**\n"
+    f"🕒 Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    f"🎬 Reel posted ✅ (ID: {reel_id})\n"
+    f"📖 Caption preview: {caption_snippet}...\n"
+    f"📹 Story posted ✅ (ID: {story_id})\n"
+    f"🌐 Video URL: {VIDEO_URL}"
+)
+
+send_discord_notification(summary_message)
