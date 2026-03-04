@@ -105,21 +105,6 @@ def publish_media(media_id, label="Media"):
     print(f"{label} published:", data)
     return data  # return data for summary
 
-def get_reel_url(media_id):
-    """Fetch the permalink (public Reel URL)"""
-    url = f"https://graph.facebook.com/{API_VERSION}/{media_id}"
-    res = requests.get(url, params={
-        "fields": "permalink",
-        "access_token": ACCESS_TOKEN
-    })
-    data = res.json()
-
-    if "permalink" not in data:
-        print("⚠️ Could not fetch permalink:", data)
-        return None
-
-    return data["permalink"]
-
 # --- Main workflow ---
 validate_token()
 
@@ -127,7 +112,7 @@ validate_token()
 reel_id = create_media(media_type="REELS")
 wait_until_ready(reel_id, "Reel")
 reel_data = publish_media(reel_id, "Reel")
-reel_url = get_reel_url(reel_id)
+
 # Upload Story
 # Commenting story section as it is postingg it as reel instead of story. 
 # And sharing the posted reel on story is not supported by instagram graph api.
@@ -143,8 +128,7 @@ summary_message = (
     f"🕒 Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
     f"🎬 Reel posted ✅ (ID: {reel_id})\n"
     f"📖 Caption preview: {caption_snippet}...\n"
-    f"🌐 Video URL: {VIDEO_URL}"
-    f"📹 Reel URL: {reel_url}"
+    f"🌐 Video URL: {VIDEO_URL}\n"
 )
 
 send_discord_notification(summary_message)
