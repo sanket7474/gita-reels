@@ -99,6 +99,9 @@ jobs:
       - name: Upload Reel to Instagram
         continue-on-error: true
         env:
+          APP_ID: ${{ secrets.APP_ID }}
+          APP_SECRET: ${{ secrets.APP_SECRET }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          VIDEO_URL: ${{ secrets.VIDEO_URL }}
         run: python scripts/post_to_instagram.py
