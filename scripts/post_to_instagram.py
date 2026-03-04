@@ -143,7 +143,6 @@ summary_message = (
     f"🕒 Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
     f"🎬 Reel posted ✅ (ID: {reel_id})\n"
     f"📖 Caption preview: {caption_snippet}...\n"
-    f"📹 Story posted ✅ (ID: {story_id})\n"
     f"🌐 Video URL: {VIDEO_URL}"
     f"📹 Reel URL: {reel_url}"
 )
