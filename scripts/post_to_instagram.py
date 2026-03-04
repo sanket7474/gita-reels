@@ -114,7 +114,7 @@ wait_until_ready(reel_id, "Reel")
 reel_data = publish_media(reel_id, "Reel")
 
 # Upload Story
-story_id = create_media(media_type="VIDEO", is_story=True)
+story_id = create_media(media_type="REELS", is_story=True)
 wait_until_ready(story_id, "Story")
 story_data = publish_media(story_id, "Story")
 
