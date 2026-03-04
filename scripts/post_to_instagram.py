@@ -27,14 +27,17 @@ REFRESH_THRESHOLD_DAYS = 50  # refresh if token is older than 50 days
 # --- Helper Functions ---
 def refresh_token():
     """Refresh long-lived token if close to expiry"""
-    url = f"https://graph.facebook.com/{API_VERSION}/oauth/access_token"
-    params = {
-        "grant_type": "fb_exchange_token",
-        "client_id": APP_ID,
-        "client_secret": APP_SECRET,
-        "fb_exchange_token": ACCESS_TOKEN
-    }
-    res = requests.get(url, params=params)
+    url = (
+        f"https://graph.facebook.com/{API_VERSION}/oauth/access_token"
+        f"?grant_type=fb_exchange_token"
+        f"&client_id={APP_ID}"
+        f"&client_secret={APP_SECRET}"
+        f"&fb_exchange_token={ACCESS_TOKEN}"
+    )
+
+    print("URL for token refresh:", url)
+
+    res = requests.get(url)
     data = res.json()
     if "access_token" in data:
         new_token = data["access_token"]
