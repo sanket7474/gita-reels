@@ -12,6 +12,13 @@ APP_SECRET = os.getenv("APP_SECRET")
 VIDEO_URL = os.getenv("VIDEO_URL")
 CAPTION_FILE = os.getenv("CAPTION_FILE", "output/caption.txt")
 
+
+print("APP_ID:", os.getenv("APP_ID"))
+print("APP_SECRET:", os.getenv("APP_SECRET")[:5], "...")
+print("IG_USER_ID:", os.getenv("IG_USER_ID"))
+print("ACCESS_TOKEN:", os.getenv("IG_ACCESS_TOKEN")[:10], "...")
+
+
 API_VERSION = "v24.0"
 MAX_ATTEMPTS = 30
 SLEEP_INTERVAL = 5
