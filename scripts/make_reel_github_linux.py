@@ -30,20 +30,20 @@ def font(path: Path, size: int):
         raise FileNotFoundError(f"Font not found: {path}")
     return ImageFont.truetype(str(path), size)
 
-
+# --- Text rendering utilities ---
 def clamp(x, a=0, b=1):
     return max(a, min(b, x))
 
-
+# Easing function for smoother fade effects
 def ease_out(t):
     return 1 - (1 - t) * (1 - t)
 
-
+# Calculate alpha value for fade-in effect based on time 't' and start time, with a default duration of 0.8 seconds for the fade
 def fade_alpha(t, start, duration=0.8):
     x = (t - start) / duration
     return ease_out(clamp(x))
 
-
+# Wrap text into lines that fit within max_width
 def wrap_lines(draw, text, font_obj, max_width):
     words = text.split()
     lines, cur = [], ""
@@ -72,7 +72,7 @@ def draw_text_glow(draw, x, y, text, font_obj, alpha=255):
 
     draw.text((x, y), text, font=font_obj, fill=(255, 215, 120, alpha))
 
-
+# center text block with dynamic line count
 def draw_centered_block(draw, text, font_obj, center_y, alpha, max_width=940, line_spacing=18):
     lines = wrap_lines(draw, text, font_obj, max_width=max_width)
 
@@ -112,7 +112,7 @@ def draw_block_from_top(draw, text, font_obj, start_y, alpha,
 
     return y
 
-
+# Load and resize background image to fit the video dimensions, cropping if necessary
 def load_background():
     if not BG_IMAGE.exists():
         raise FileNotFoundError(f"Background image not found: {BG_IMAGE}")
@@ -121,14 +121,14 @@ def load_background():
 
     img_ratio = img.width / img.height
     target_ratio = W / H
-
+    # If image is wider than target, fit height and crop width; else fit width and crop height
     if img_ratio > target_ratio:
         new_h = H
         new_w = int(H * img_ratio)
     else:
         new_w = W
         new_h = int(W / img_ratio)
-
+    # Use LANCZOS resampling for high-quality resizing
     img = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
 
     left = (new_w - W) // 2
@@ -137,14 +137,15 @@ def load_background():
 
     return img
 
-
+# Pick a random music file from the preferred list or all available MP3 files
 def pick_music_file():
     preferred = []
+    # Check for specifically named music files (Music1.mp3 to Music10.mp3) and prefer them if they exist
     for i in range(1, 11):
         f = MUSIC_DIR / f"Music{i}.mp3"
         if f.exists():
             preferred.append(f)
-
+    # If preferred files are found, choose randomly among them; otherwise, pick from all MP3s in the directory
     if preferred:
         return random.choice(preferred)
 
@@ -153,7 +154,7 @@ def pick_music_file():
         raise FileNotFoundError("No mp3 files found")
     return random.choice(mp3s)
 
-
+# Build the audio clip, ensuring it matches the video duration and has fade in/out
 def build_audio():
     music_path = pick_music_file()
     audio = AudioFileClip(str(music_path))
@@ -179,6 +180,8 @@ def main():
 
     bg_base = load_background()
 
+    # This function generates each video frame based on the current time 't', 
+    #applying fade-in effects to different text elements according to the specified timings
     def make_frame(t):
         bg = bg_base.copy().convert("RGBA")
         overlay = Image.new("RGBA", (W, H), (0, 0, 0, 55))
@@ -202,12 +205,14 @@ def main():
         y = draw_block_from_top(draw, quote["english"], f_eng, y, a_en)
         y += 150
         draw_block_from_top(draw, quote["hindi"], f_hin, y, a_hi)
-
+        # footer
         footer = f"Bhagavad Gita {quote['reference']}"
         draw_centered_block(draw, footer, f_footer, 1760, a_footer, 1000, 10)
 
         return np.array(bg.convert("RGB"))
-
+    
+    # Create the video clip using the make_frame function and set the audio, 
+    #then write the final video file with specified encoding and bitrate for good quality while keeping file size reasonable
     clip = VideoClip(make_frame, duration=DURATION)
     clip = clip.set_audio(build_audio())
 
