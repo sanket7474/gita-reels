@@ -74,6 +74,7 @@ def wait_until_ready(media_id, label="Media"):
         status_json = status_res.json()
         status = status_json.get("status_code")
         print(f"{label} status:", status)
+        print(f"Response:", status_json)
         if status == "FINISHED":
             return
         elif status == "ERROR":
