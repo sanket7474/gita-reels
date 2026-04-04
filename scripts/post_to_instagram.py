@@ -13,7 +13,7 @@ DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK")  # optional
 
 API_VERSION = "v24.0"
 MAX_ATTEMPTS = 30
-SLEEP_INTERVAL = 0
+SLEEP_INTERVAL = 5  
 
 # --- Helper functions ---
 def send_discord_notification(message: str):
@@ -66,7 +66,6 @@ def wait_until_ready(media_id, label="Media"):
     """Wait until media is processed and ready to publish"""
     status_url = f"https://graph.facebook.com/{API_VERSION}/{media_id}"
     attempt = 0
-    waitOnce= true;
     while attempt < MAX_ATTEMPTS:
         status_res = requests.get(status_url, params={
             "fields": "status_code",
@@ -83,10 +82,7 @@ def wait_until_ready(media_id, label="Media"):
             print(message)
             send_discord_notification(message)
         attempt += 1
-        if waitOnce:
-            time.sleep(SLEEP_INTERVAL)
-            waitOnce = false;
-        
+        time.sleep(SLEEP_INTERVAL)
     message = f"{label} timed out waiting for processing"
     print(message)
     send_discord_notification(message)
