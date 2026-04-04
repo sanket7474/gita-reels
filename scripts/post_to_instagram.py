@@ -81,6 +81,7 @@ def wait_until_ready(media_id, label="Media"):
             message = f"{label} processing failed ❌"
             print(message)
             send_discord_notification(message)
+            sys.exit(1)
         attempt += 1
         time.sleep(SLEEP_INTERVAL)
     message = f"{label} timed out waiting for processing"
