@@ -11,6 +11,7 @@ jobs:
   build-reel:
     runs-on: ubuntu-latest
     environment: github-pages
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -45,7 +46,7 @@ jobs:
         run: |
           mkdir -p output
           python scripts/pick_today_quote.py
-      
+
       - name: Generate caption
         run: |
           python scripts/make_caption.py
@@ -67,7 +68,6 @@ jobs:
           mkdir -p pages/reels
           cp output/reel.mp4 pages/reels/reel.mp4
           cp output/caption.txt pages/reels/caption.txt
-          # cp pages/privacy-policy.html pages/privacy-policy.html
 
           # index page
           cat > pages/index.html <<'EOF'
@@ -82,6 +82,7 @@ jobs:
             <h2>Daily Gita Reel</h2>
             <p><a href="reels/reel.mp4">Download Reel</a></p>
             <p><a href="reels/caption.txt">Caption</a></p>
+
             <video controls width="360">
               <source src="reels/reel.mp4" type="video/mp4">
             </video>
@@ -89,13 +90,20 @@ jobs:
           </html>
           EOF
 
+      # 🤖 Deploy using GitHub Actions bot identity
       - name: Deploy to GitHub Pages (gh-pages)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: pages
           publish_branch: gh-pages
-      
+
+          # Use GitHub Actions bot instead of your personal identity
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+
+          commit_message: "chore: deploy daily reel"
+
       - name: Wait before uploading to Instagram
         run: sleep 300   # waits 300 seconds (5 minutes)
 
@@ -108,4 +116,5 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           VIDEO_URL: ${{ secrets.VIDEO_URL }}
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+
         run: python scripts/post_to_instagram.py
